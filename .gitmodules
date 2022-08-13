@@ -1,3 +1,6 @@
 [submodule "vendor/sidenote.hu-archive"]
 	path = vendor/sidenote.hu-archive
 	url = git@github.com:szantaii/sidenote.hu-archive.git
+[submodule "vendor/normalize.css"]
+	path = vendor/normalize.css
+	url = git@github.com:szantaii/normalize.css.git
