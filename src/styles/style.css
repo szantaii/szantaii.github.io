@@ -14,6 +14,22 @@
         url('IBMPlexSans-Bold.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fa-brands-400.ttf') format('truetype'),
+        url('fa-brands-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fa-regular-400.ttf') format('truetype'),
+        url('fa-regular-400.woff2') format('woff2');
+    }
+
 *,
 a,
 abbr,
@@ -128,10 +144,10 @@ q {
     quotes: none;
 }
 
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
     content: none;
 }
 
@@ -270,4 +286,41 @@ section {
     footer {
         font-size: 1rem;
     }
+}
+
+.icon::before {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.icon.regular::before {
+    font-family: 'Font Awesome 6 Free';
+}
+
+.icon.brands::before {
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.icon.regular.email::before {
+    content: '\f0e0\00202f';
+}
+
+.icon.brands.github::before {
+    content: '\f113\00202f';
+}
+
+.icon.brands.linkedin::before {
+    content: '\f08c\00202f';
+}
+
+.icon.brands.facebook::before {
+    content: '\f09a\00202f';
+}
+
+.icon.brands.youtube::before {
+    content: '\f167\00202f';
+}
+
+.icon.brands.stackexchange::before {
+    content: '\f18d\00202f';
 }
