@@ -4,3 +4,6 @@
 [submodule "vendor/normalize.css"]
 	path = vendor/normalize.css
 	url = git@github.com:szantaii/normalize.css.git
+[submodule "vendor/ibm-plex"]
+	path = vendor/ibm-plex
+	url = git@github.com:szantaii/ibm-plex.git
