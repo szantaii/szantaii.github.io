@@ -7,3 +7,6 @@
 [submodule "vendor/ibm-plex"]
 	path = vendor/ibm-plex
 	url = git@github.com:szantaii/ibm-plex.git
+[submodule "vendor/Font-Awesome"]
+	path = vendor/Font-Awesome
+	url = git@github.com:szantaii/Font-Awesome.git
