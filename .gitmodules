@@ -1,0 +1,3 @@
+[submodule "vendor/sidenote.hu-archive"]
+	path = vendor/sidenote.hu-archive
+	url = git@github.com:szantaii/sidenote.hu-archive.git
