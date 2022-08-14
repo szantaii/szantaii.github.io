@@ -9,14 +9,24 @@ deploy_directory="${script_directory}/docs"
 
 source_target_path_pairs=(
     "${source_directory}/html/index.html:${deploy_directory}/"
+
     "${source_directory}/images/favicon.svg:${deploy_directory}/"
     "${source_directory}/images/szantaii.svg:${deploy_directory}/"
+
     "${source_directory}/styles/style.css:${deploy_directory}/"
+
+    "${vendor_directory}/Font-Awesome/webfonts/fa-brands-400.ttf:${deploy_directory}/"
+    "${vendor_directory}/Font-Awesome/webfonts/fa-brands-400.woff2:${deploy_directory}/"
+    "${vendor_directory}/Font-Awesome/webfonts/fa-regular-400.ttf:${deploy_directory}/"
+    "${vendor_directory}/Font-Awesome/webfonts/fa-regular-400.woff2:${deploy_directory}/"
+
     "${vendor_directory}/ibm-plex/IBM-Plex-Sans/fonts/complete/ttf/IBMPlexSans-Bold.ttf:${deploy_directory}/"
     "${vendor_directory}/ibm-plex/IBM-Plex-Sans/fonts/complete/ttf/IBMPlexSans-Light.ttf:${deploy_directory}/"
     "${vendor_directory}/ibm-plex/IBM-Plex-Sans/fonts/complete/woff2/IBMPlexSans-Bold.woff2:${deploy_directory}/"
     "${vendor_directory}/ibm-plex/IBM-Plex-Sans/fonts/complete/woff2/IBMPlexSans-Light.woff2:${deploy_directory}/"
+
     "${vendor_directory}/normalize.css/normalize.css:${deploy_directory}/"
+
     "${vendor_directory}/sidenote.hu-archive/mirror:${deploy_directory}/sidenote.hu-static-archive"
 )
 
