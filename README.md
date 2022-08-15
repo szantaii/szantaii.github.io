@@ -34,4 +34,4 @@ Deploy the site into the `docs` directory.
 
 ## Copyright
 
-© 2022 István Szántai. All rights reserved.
+© 2022 István Szántai.
