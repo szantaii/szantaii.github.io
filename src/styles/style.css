@@ -179,7 +179,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'IBM Plex Sans', sans-serif;
     font-variant-ligatures: normal;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.5;
     color: var(--primary-text-color);
@@ -229,7 +229,7 @@ main {
     margin: 3rem 2rem 2rem;
     height: 100%;
     width: 90%;
-    max-width: 48rem;
+    max-width: 32rem;
 }
 
 canvas {
@@ -243,49 +243,17 @@ header {
 
 img {
     width: 100%;
-    max-width: 264px;
+    max-width: 11rem;
     margin-bottom: 2rem;
 }
 
 footer {
-    font-size: .75rem;
+    font-size: 1rem;
     margin-bottom: 4rem;
 }
 
 section {
     position: absolute;
-}
-
-@media screen and (min-width:48rem) {
-    body {
-        font-size: 1.5rem;
-    }
-
-    h2,
-    h3 {
-        margin-bottom: 1rem;
-    }
-
-    main {
-        margin: 6rem 5rem 5rem;
-        width: 90%;
-        max-width: 48rem;
-    }
-
-    article,
-    footer,
-    header {
-        margin-bottom: 5rem;
-    }
-
-    img {
-        max-width: 264px;
-        margin-bottom: 4rem;
-    }
-
-    footer {
-        font-size: 1rem;
-    }
 }
 
 .icon::before {
@@ -323,4 +291,54 @@ section {
 
 .icon.brands.stackexchange::before {
     content: '\f18d\00202f';
+}
+
+.note-mark,
+.note-ref {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.note-mark {
+    margin-left: -1rem;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media screen and (min-width:48rem) {
+    body {
+        font-size: 2rem;
+    }
+
+    h2,
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    main {
+        margin: 6rem 5rem 5rem;
+        max-width: 48rem;
+        width: 90%;
+    }
+
+    article,
+    footer,
+    header {
+        margin-bottom: 5rem;
+    }
+
+    img {
+        margin-bottom: 4rem;
+        max-width: 16.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+
+    .note-mark,
+    .note-ref {
+        font-size: 1.5rem;
+    }
+
 }
