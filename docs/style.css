@@ -1,0 +1,344 @@
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('IBMPlexSans-Light.ttf') format('truetype'),
+        url('IBMPlexSans-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('IBMPlexSans-Bold.ttf') format('truetype'),
+        url('IBMPlexSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fa-brands-400.ttf') format('truetype'),
+        url('fa-brands-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fa-regular-400.ttf') format('truetype'),
+        url('fa-regular-400.woff2') format('woff2');
+    }
+
+*,
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-variant-ligatures: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --background-color: #f5f5f5;
+    --primary-text-color: #0d0d0d;
+    --secondary-text-color: #1a1a1a;
+    --link-text-color: #111111;
+}
+
+::selection {
+    color: var(--background-color);
+    background-color: var(--primary-text-color);
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-variant-ligatures: normal;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h3 {
+    font-weight: 700;
+}
+
+h3 {
+    margin-bottom: .25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a,
+span,
+ul {
+    color: var(--link-text-color);
+}
+
+p,
+span,
+ul {
+    color: var(--secondary-text-color);
+}
+
+ul {
+    list-style-type: disc;
+}
+
+li {
+    margin-left: 2.125rem;
+}
+
+main {
+    position: relative;
+    margin: 3rem 2rem 2rem;
+    height: 100%;
+    width: 90%;
+    max-width: 32rem;
+}
+
+canvas {
+    display: none;
+}
+
+article,
+header {
+    margin-bottom: 3rem;
+}
+
+img {
+    width: 100%;
+    max-width: 11rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+}
+
+section {
+    position: absolute;
+}
+
+.icon::before {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.icon.regular::before {
+    font-family: 'Font Awesome 6 Free';
+}
+
+.icon.brands::before {
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.icon.regular.email::before {
+    content: '\f0e0\00202f';
+}
+
+.icon.brands.github::before {
+    content: '\f113\00202f';
+}
+
+.icon.brands.linkedin::before {
+    content: '\f08c\00202f';
+}
+
+.icon.brands.facebook::before {
+    content: '\f09a\00202f';
+}
+
+.icon.brands.youtube::before {
+    content: '\f167\00202f';
+}
+
+.icon.brands.stackexchange::before {
+    content: '\f18d\00202f';
+}
+
+.note-mark,
+.note-ref {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.note-mark {
+    margin-left: -1rem;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media screen and (min-width:48rem) {
+    body {
+        font-size: 2rem;
+    }
+
+    h2,
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    main {
+        margin: 6rem 5rem 5rem;
+        max-width: 48rem;
+        width: 90%;
+    }
+
+    article,
+    footer,
+    header {
+        margin-bottom: 5rem;
+    }
+
+    img {
+        margin-bottom: 4rem;
+        max-width: 16.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+
+    .note-mark,
+    .note-ref {
+        font-size: 1.5rem;
+    }
+
+}

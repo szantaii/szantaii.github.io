@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            bash-gorillas / sidenote
+        </title>
+        <link rel="shortcut icon" href="wp-content/themes/sidenoteminimal/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/pagenavi-css.css">
+        <link rel="stylesheet" id="codecolorer-css" href="wp-content/plugins/codecolorer/codecolorer.css%3Fver=0.9.11.css" type="text/css" media="screen">
+        <link rel="prev" title="Bash-ben" href="index.html%3Fp=7791.html">
+        <link rel="next" title="5. Retro video- és kvarcjáték kiállítás" href="index.html%3Fp=7951.html">
+        <link rel="canonical" href="index.html%3Fp=7891.html">
+        <link rel="shortlink" href="index.html%3Fp=7891.html">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header clear">
+                <div class="logo">
+                    <a title="http://sidenote.hu/" href="index.html">http://sidenote.hu/</a>
+                </div>
+                <h1>
+                    <a title="sidenote" href="index.html">sidenote</a>
+                </h1>
+                <div class="menu">
+                    <ul id="menu-header" class="menu">
+                        <li id="menu-item-4317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4317">
+                            <a title="Címlap" href="index.html">Címlap</a>
+                        </li>
+                        <li id="menu-item-7810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7810">
+                            <a title="Projektek" href="index.html%3Fp=7396.html">Projektek</a>
+                        </li>
+                        <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319">
+                            <a title="Rólunk" href="index.html%3Fp=1345.html">Rólunk</a>
+                        </li>
+                        <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318">
+                            <a title="Archívum" href="index.html%3Fp=284.html">Archívum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form id="searchform" name="searchform">
+                        <fieldset disabled>
+                            <input type="text" value="Keresés" disabled>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="middle clear">
+                <div id="content">
+                    <div class="single clear post-7891 post type-post status-publish format-standard hentry category-alkotunk category-gizmo category-jatek category-linux category-szoftver tag-bash tag-indie" id="post_7891">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="index.html%3Fp=7891.html" title="bash-gorillas" rel="chapter">bash-gorillas</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2013. április 8. 11:53
+                                </div>
+                                <div class="post_categories">
+                                    <a href="category/alkotunk/index.html" rel="category tag">alkotunk</a>, <a href="category/gizmo/index.html" rel="category tag">gizmó</a>, <a href="category/jatek/index.html" rel="category tag">játék</a>, <a href="category/linux/index.html" rel="category tag">Linux</a>, <a href="category/szoftver/index.html" rel="category tag">szoftver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Ezt írtam <a href="index.html%3Fp=7791.html">legutóbb</a>:
+                            </p>
+                            <blockquote>
+                                <p>
+                                    A következő nagy projekt a <a href="index.html%3Fp=7540.html">Gorillas játék</a> Bash változata. Hosszú lesz megírni, és egészen biztos vagyok benne, hogy fájdalmasan lassan fog futni, de akkor is… Jó lesz!
+                                </p>
+                            </blockquote>
+                            <p>
+                                Nem volt hosszú, vagy nehéz megírni, és nem fut „fájdalmasan lassan” sem (ez persze géptől függ), viszont tényleg jó lett.
+                            </p>
+                            <p>
+                                <img src="wp-content/uploads/2013/04/bash-gorillas.png" alt="bash-gorillas" width="640" height="355" class="alignnone size-full wp-image-7897" srcset="wp-content/uploads/2013/04/bash-gorillas.png 640w, wp-content/uploads/2013/04/bash-gorillas-225x124.png 225w, wp-content/uploads/2013/04/bash-gorillas-350x194.png 350w" sizes="(max-width: 640px) 100vw, 640px">
+                            </p>
+                            <p>
+                                Előkövetelmény Bash ≥ 4.2, <code class="codecolorer text dawn"><span class="text">ncurses-bin</span></code>, <code class="codecolorer text dawn"><span class="text">bc</span></code> és minimum 80×22 méretű terminál. A kód elérhető <a href="https://github.com/szantaii/bash-gorillas">GitHub-on</a>, a futtatáshoz pedig a következőket kell terminálba bepötyögni:
+                            </p>
+                            <div class="codecolorer-container bash dawn" style="overflow:auto;white-space:nowrap;">
+                                <div class="bash codecolorer">
+                                    $ <span class="kw2">git clone</span> https:<span class="sy0">//</span>github.com<span class="sy0">/</span>szantaii<span class="sy0">/</span>bash-gorillas.git<br>
+                                    $ <span class="kw3">cd</span> bash-gorillas<br>
+                                    $ <span class="kw2">bash</span> bash-gorillas.sh
+                                </div>
+                            </div>
+                            <p>
+                                <a href="wp-content/uploads/2013/04/bash-gorillas-2.png"><img src="wp-content/uploads/2013/04/bash-gorillas-2-350x197.png" alt="bash-gorillas" width="350" height="197" class="alignnone size-medium wp-image-7934" srcset="wp-content/uploads/2013/04/bash-gorillas-2-350x197.png 350w, wp-content/uploads/2013/04/bash-gorillas-2-225x127.png 225w, wp-content/uploads/2013/04/bash-gorillas-2-705x398.png 705w, wp-content/uploads/2013/04/bash-gorillas-2.png 1280w" sizes="(max-width: 350px) 100vw, 350px"></a>&nbsp;<a href="wp-content/uploads/2013/04/bash-gorillas-3.png"><img src="wp-content/uploads/2013/04/bash-gorillas-3-350x228.png" alt="bash-gorillas" width="350" height="228" class="alignnone size-medium wp-image-7933" srcset="wp-content/uploads/2013/04/bash-gorillas-3-350x228.png 350w, wp-content/uploads/2013/04/bash-gorillas-3-225x146.png 225w, wp-content/uploads/2013/04/bash-gorillas-3.png 484w" sizes="(max-width: 350px) 100vw, 350px"></a>
+                            </p>
+                            <p>
+                                További fejlesztések:
+                            </p>
+                            <ul>
+                                <li>
+                                    <del datetime="2013-04-18T06:11:53+00:00">README frissítése (hét második fele);</del>
+                                </li>
+                                <li>
+                                    <del datetime="2013-04-18T06:11:53+00:00">kód kommentezése (majd valamikor);</del>
+                                </li>
+                                <li>dobás szög és sebesség felhasználó által való javítási lehetősége <del datetime="2013-05-01T07:32:58+00:00">(ezt a hét második felében megcsinálom);</del>
+                                </li>
+                                <li>
+                                    <del datetime="2013-04-18T06:11:53+00:00"><code class="codecolorer text dawn"><span class="text">max_speed</span></code>, <code class="codecolorer text dawn"><span class="text">wind_value</span></code> beállítása a játék indításakor <code class="codecolorer bash dawn"><span class="bash"><span class="kw3">getopts</span></span></code> használatával (hétvégén vagy jövő héten megírom);</del>
+                                </li>
+                                <li>
+                                    <del datetime="2013-04-30T15:35:30+00:00">bejegyzés létrehozása a <a href="index.html%3Fp=7396.html">Projektek</a>, illetve a <a href="../bash.sidenote.hu/index.html">bash.sidenote.hu</a> oldalakon.</del>
+                                </li>
+                            </ul>
+                            <p>
+                                A hátralevő fejlesztések ellenére már használható a cucc. Viszont ne habozzatok írni, ha találtok bugot, elérhetőségem a <a href="index.html%3Fp=1345.html">Rólunk oldalon</a>. (Diffeknek örülnék a legjobban.)
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="tag/bash/index.html" rel="tag">Bash</a>
+                                    </li>
+                                    <li>
+                                        <a href="tag/indie/index.html" rel="tag">indie</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <h3>
+                            Mit olvasunk?
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li>
+                                    <a href="#">Boing Boing</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Canonical Design">Canonical Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Culture Japan – Your portal to Japan">Culture Japan</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Engadget">Engadget</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Fat-Pie.com :: Animation and stuff by David Firth">Fat-Pie.com</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Free Gamer – Open Source Games">Free Gamer</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Handras">Handras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hungarian Unix Portal">Hungarian Unix Portal</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="IKEA Hackers">IKEA Hackers</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Jupiter Broadcasting">Jupiter Broadcasting</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Keleti Szél">Keleti Szél</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Napirajz – Súlyosbítva azt, ami amúgy is.">Napirajz</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="plastik media">Plastik média</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="PROHARDVER! – Az Online PC Magazin">PROHARDVER!</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tokyo Times – Photographs from a small group of islands">Tokyo Times</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Twitch">Twitch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>
+                            Kategóriák
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li class="cat-item cat-item-3">
+                                    <a href="category/a-blog/index.html">a blog</a> (10)
+                                </li>
+                                <li class="cat-item cat-item-4">
+                                    <a href="category/alkotunk/index.html">alkotunk</a> (37)
+                                </li>
+                                <li class="cat-item cat-item-6">
+                                    <a href="category/animacio/index.html">animáció</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-7">
+                                    <a href="category/anime/index.html">anime</a> (9)
+                                </li>
+                                <li class="cat-item cat-item-8">
+                                    <a href="category/apple/index.html">Apple</a> (2)
+                                </li>
+                                <li class="cat-item cat-item-15">
+                                    <a href="category/film/index.html">film</a> (36)
+                                </li>
+                                <li class="cat-item cat-item-17">
+                                    <a href="category/foto/index.html">fotó</a> (18)
+                                </li>
+                                <li class="cat-item cat-item-18">
+                                    <a href="category/gizmo/index.html">gizmó</a> (48)
+                                </li>
+                                <li class="cat-item cat-item-20">
+                                    <a href="category/hardver/index.html">hardver</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-21">
+                                    <a href="category/holiday/index.html">holiday</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-36">
+                                    <a href="category/humor/index.html">humor</a> (14)
+                                </li>
+                                <li class="cat-item cat-item-26">
+                                    <a href="category/ismeretterjeszto/index.html">ismeretterjesztő</a> (31)
+                                </li>
+                                <li class="cat-item cat-item-28">
+                                    <a href="category/japan/index.html">Japán</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-29">
+                                    <a href="category/jatek/index.html">játék</a> (35)
+                                </li>
+                                <li class="cat-item cat-item-34">
+                                    <a href="category/konyv/index.html">könyv</a> (15)
+                                </li>
+                                <li class="cat-item cat-item-35">
+                                    <a href="category/linux/index.html">Linux</a> (38)
+                                </li>
+                                <li class="cat-item cat-item-43">
+                                    <a href="category/munka/index.html">munka</a> (8)
+                                </li>
+                                <li class="cat-item cat-item-44">
+                                    <a href="category/muveszet-dizajn/index.html">művészet, dizájn</a> (34)
+                                </li>
+                                <li class="cat-item cat-item-46">
+                                    <a href="category/para/index.html">para</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-52">
+                                    <a href="category/sport/index.html">sport</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-54">
+                                    <a href="category/szoftver/index.html">szoftver</a> (88)
+                                </li>
+                                <li class="cat-item cat-item-99">
+                                    <a href="category/tv/index.html">TV</a> (1)
+                                </li>
+                                <li class="cat-item cat-item-67">
+                                    <a href="category/void/index.html">void *</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-68">
+                                    <a href="category/web2/index.html">web2</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-70">
+                                    <a href="category/zene/index.html">zene</a> (25)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copy">
+                Minden itt található tartalomra a <a title="Creative Commons — Attribution-NonCommercial-ShareAlike 2.5 Hungary" href="#" rel="copyright">Creative<br>
+                Commons 2.5</a> licencfeltételek érvényesek.
+            </p>
+            <p class="credits">
+                Dizájn: <a href="#" title="WPSHOWER - Free wordpress themes">Wpshower</a> & <a href="#" title="Reveal this e-mail address">szantaii</a>.
+            </p>
+        </div>
+    </body>
+</html>

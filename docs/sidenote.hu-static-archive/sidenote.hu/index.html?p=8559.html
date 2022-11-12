@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            Creeper / sidenote
+        </title>
+        <link rel="shortcut icon" href="wp-content/themes/sidenoteminimal/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/pagenavi-css.css">
+        <link rel="stylesheet" id="codecolorer-css" href="wp-content/plugins/codecolorer/codecolorer.css%3Fver=0.9.11.css" type="text/css" media="screen">
+        <link rel="prev" title="Drawing an Enderman in LaTeX" href="index.html%3Fp=8535.html">
+        <link rel="next" title="Font outline animation" href="index.html%3Fp=8571.html">
+        <link rel="canonical" href="index.html%3Fp=8559.html">
+        <link rel="shortlink" href="index.html%3Fp=8559.html">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header clear">
+                <div class="logo">
+                    <a title="http://sidenote.hu/" href="index.html">http://sidenote.hu/</a>
+                </div>
+                <h1>
+                    <a title="sidenote" href="index.html">sidenote</a>
+                </h1>
+                <div class="menu">
+                    <ul id="menu-header" class="menu">
+                        <li id="menu-item-4317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4317">
+                            <a title="Címlap" href="index.html">Címlap</a>
+                        </li>
+                        <li id="menu-item-7810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7810">
+                            <a title="Projektek" href="index.html%3Fp=7396.html">Projektek</a>
+                        </li>
+                        <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319">
+                            <a title="Rólunk" href="index.html%3Fp=1345.html">Rólunk</a>
+                        </li>
+                        <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318">
+                            <a title="Archívum" href="index.html%3Fp=284.html">Archívum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form id="searchform" name="searchform">
+                        <fieldset disabled>
+                            <input type="text" value="Keresés" disabled>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="middle clear">
+                <div id="content">
+                    <div class="single clear post-8559 post type-post status-publish format-standard hentry category-alkotunk category-jatek category-szoftver tag-indie tag-rajz tag-tex-latex" id="post_8559">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="index.html%3Fp=8559.html" title="Creeper" rel="chapter">Creeper</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2014. augusztus 3. 18:17
+                                </div>
+                                <div class="post_categories">
+                                    <a href="category/alkotunk/index.html" rel="category tag">alkotunk</a>, <a href="category/jatek/index.html" rel="category tag">játék</a>, <a href="category/szoftver/index.html" rel="category tag">szoftver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                As a follow-up for <a href="index.html%3Fp=8535.html" title="Drawing an Enderman in LaTeX / sidenote">my last post</a> hereby I present a Creeper (right) in (Lua)LaTeX.
+                            </p>
+                            <p>
+                                <a href="wp-content/uploads/2014/08/creeper_minecraft_wiki.png"><img src="wp-content/uploads/2014/08/creeper_minecraft_wiki-350x713.png" alt="Creeper" width="350" height="713" class="alignnone size-medium wp-image-8561" srcset="wp-content/uploads/2014/08/creeper_minecraft_wiki-350x713.png 350w, wp-content/uploads/2014/08/creeper_minecraft_wiki-225x458.png 225w, wp-content/uploads/2014/08/creeper_minecraft_wiki.png 454w" sizes="(max-width: 350px) 100vw, 350px"></a>&nbsp;<a href="wp-content/uploads/2014/08/creeper_lualatex.png"><img src="wp-content/uploads/2014/08/creeper_lualatex-350x713.png" alt="Creeper" width="350" height="713" class="alignnone size-medium wp-image-8562" srcset="wp-content/uploads/2014/08/creeper_lualatex-350x713.png 350w, wp-content/uploads/2014/08/creeper_lualatex-225x458.png 225w, wp-content/uploads/2014/08/creeper_lualatex.png 560w" sizes="(max-width: 350px) 100vw, 350px"></a>
+                            </p>
+                            <p>
+                                Image source (left): <a href="#" title="File:Creeper.png - Minecraft Wiki">File:Creeper.png – Minecraft Wiki</a>
+                            </p>
+                            <div class="codecolorer-container lua dawn" style="overflow:auto;white-space:nowrap;height:400px;">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="line-numbers">
+                                                <div>
+                                                    1<br>
+                                                    2<br>
+                                                    3<br>
+                                                    4<br>
+                                                    5<br>
+                                                    6<br>
+                                                    7<br>
+                                                    8<br>
+                                                    9<br>
+                                                    10<br>
+                                                    11<br>
+                                                    12<br>
+                                                    13<br>
+                                                    14<br>
+                                                    15<br>
+                                                    16<br>
+                                                    17<br>
+                                                    18<br>
+                                                    19<br>
+                                                    20<br>
+                                                    21<br>
+                                                    22<br>
+                                                    23<br>
+                                                    24<br>
+                                                    25<br>
+                                                    26<br>
+                                                    27<br>
+                                                    28<br>
+                                                    29<br>
+                                                    30<br>
+                                                    31<br>
+                                                    32<br>
+                                                    33<br>
+                                                    34<br>
+                                                    35<br>
+                                                    36<br>
+                                                    37<br>
+                                                    38<br>
+                                                    39<br>
+                                                    40<br>
+                                                    41<br>
+                                                    42<br>
+                                                    43<br>
+                                                    44<br>
+                                                    45<br>
+                                                    46<br>
+                                                    47<br>
+                                                    48<br>
+                                                    49<br>
+                                                    50<br>
+                                                    51<br>
+                                                    52<br>
+                                                    53<br>
+                                                    54<br>
+                                                    55<br>
+                                                    56<br>
+                                                    57<br>
+                                                    58<br>
+                                                    59<br>
+                                                    60<br>
+                                                    61<br>
+                                                    62<br>
+                                                    63<br>
+                                                    64<br>
+                                                    65<br>
+                                                    66<br>
+                                                    67<br>
+                                                    68<br>
+                                                    69<br>
+                                                    70<br>
+                                                    71<br>
+                                                    72<br>
+                                                    73<br>
+                                                    74<br>
+                                                    75<br>
+                                                    76<br>
+                                                    77<br>
+                                                    78<br>
+                                                    79<br>
+                                                    80<br>
+                                                    81<br>
+                                                    82<br>
+                                                    83<br>
+                                                    84<br>
+                                                    85<br>
+                                                    86<br>
+                                                    87<br>
+                                                    88<br>
+                                                    89<br>
+                                                    90<br>
+                                                    91<br>
+                                                    92<br>
+                                                    93<br>
+                                                    94<br>
+                                                    95<br>
+                                                    96<br>
+                                                    97<br>
+                                                    98<br>
+                                                    99<br>
+                                                    100<br>
+                                                    101<br>
+                                                    102<br>
+                                                    103<br>
+                                                    104<br>
+                                                    105<br>
+                                                    106<br>
+                                                    107<br>
+                                                    108<br>
+                                                    109<br>
+                                                    110<br>
+                                                    111<br>
+                                                    112<br>
+                                                    113<br>
+                                                    114<br>
+                                                    115<br>
+                                                    116<br>
+                                                    117<br>
+                                                    118<br>
+                                                    119<br>
+                                                    120<br>
+                                                    121<br>
+                                                    122<br>
+                                                    123<br>
+                                                    124<br>
+                                                    125<br>
+                                                    126<br>
+                                                    127<br>
+                                                    128<br>
+                                                    129<br>
+                                                    130<br>
+                                                    131<br>
+                                                    132<br>
+                                                    133<br>
+                                                    134<br>
+                                                    135<br>
+                                                    136<br>
+                                                    137<br>
+                                                    138<br>
+                                                    139<br>
+                                                    140<br>
+                                                    141<br>
+                                                    142<br>
+                                                    143<br>
+                                                    144<br>
+                                                    145<br>
+                                                    146<br>
+                                                    147<br>
+                                                    148<br>
+                                                    149<br>
+                                                    150<br>
+                                                    151<br>
+                                                    152<br>
+                                                    153<br>
+                                                    154<br>
+                                                    155<br>
+                                                    156<br>
+                                                    157<br>
+                                                    158<br>
+                                                    159<br>
+                                                    160<br>
+                                                    161<br>
+                                                    162<br>
+                                                    163<br>
+                                                    164<br>
+                                                    165<br>
+                                                    166<br>
+                                                    167<br>
+                                                    168<br>
+                                                    169<br>
+                                                    170<br>
+                                                    171<br>
+                                                    172<br>
+                                                    173<br>
+                                                    174<br>
+                                                    175<br>
+                                                    176<br>
+                                                    177<br>
+                                                    178<br>
+                                                    179<br>
+                                                    180<br>
+                                                    181<br>
+                                                    182<br>
+                                                    183<br>
+                                                    184<br>
+                                                    185<br>
+                                                    186<br>
+                                                    187<br>
+                                                    188<br>
+                                                    189<br>
+                                                    190<br>
+                                                    191<br>
+                                                    192<br>
+                                                    193<br>
+                                                    194<br>
+                                                    195<br>
+                                                    196<br>
+                                                    197<br>
+                                                    198<br>
+                                                    199<br>
+                                                    200<br>
+                                                    201<br>
+                                                    202<br>
+                                                    203<br>
+                                                    204<br>
+                                                    205<br>
+                                                    206<br>
+                                                    207<br>
+                                                    208<br>
+                                                    209<br>
+                                                    210<br>
+                                                    211<br>
+                                                    212<br>
+                                                    213<br>
+                                                    214<br>
+                                                    215<br>
+                                                    216<br>
+                                                    217<br>
+                                                    218<br>
+                                                    219<br>
+                                                    220<br>
+                                                    221<br>
+                                                    222<br>
+                                                    223<br>
+                                                    224<br>
+                                                    225<br>
+                                                    226<br>
+                                                    227<br>
+                                                    228<br>
+                                                    229<br>
+                                                    230<br>
+                                                    231<br>
+                                                    232<br>
+                                                    233<br>
+                                                    234<br>
+                                                    235<br>
+                                                    236<br>
+                                                    237<br>
+                                                    238<br>
+                                                    239<br>
+                                                    240<br>
+                                                    241<br>
+                                                    242<br>
+                                                    243<br>
+                                                    244<br>
+                                                    245<br>
+                                                    246<br>
+                                                    247<br>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="lua codecolorer">
+                                                    <span class="sy0">%</span> Creeper<br>
+                                                    <span class="sy0">%</span> Author<span class="sy0">:</span> István Szántai <span class="br0">(</span>szantaii<span class="br0">)</span><br>
+                                                    \documentclass<span class="br0">{</span>article<span class="br0">}</span><br>
+                                                    <br>
+                                                    \usepackage<span class="br0">{</span>luacode<span class="br0">}</span><br>
+                                                    <br>
+                                                    \usepackage<span class="br0">{</span>xcolor<span class="br0">}</span><br>
+                                                    <br>
+                                                    \usepackage<span class="br0">{</span>tikz<span class="br0">}</span><br>
+                                                    \usepackage<span class="br0">{</span>tikz<span class="sy0">-</span>3dplot<span class="br0">}</span><br>
+                                                    <br>
+                                                    \usepackage<span class="br0">[</span>active<span class="sy0">,</span> tightpage<span class="br0">]</span><span class="br0">{</span>preview<span class="br0">}</span><br>
+                                                    \PreviewEnvironment<span class="br0">{</span>tikzpicture<span class="br0">}</span><br>
+                                                    \setlength<span class="br0">{</span>\PreviewBorder<span class="br0">}</span><span class="br0">{</span>1cm<span class="br0">}</span><br>
+                                                    <br>
+                                                    \definecolor<span class="br0">{</span>creeper_white<span class="br0">}</span><span class="br0">{</span>HTML<span class="br0">}</span><span class="br0">{</span>9AD78E<span class="br0">}</span><br>
+                                                    \definecolor<span class="br0">{</span>creeper_lightgreen<span class="br0">}</span><span class="br0">{</span>HTML<span class="br0">}</span><span class="br0">{</span>5ED04C<span class="br0">}</span><br>
+                                                    \definecolor<span class="br0">{</span>creeper_green<span class="br0">}</span><span class="br0">{</span>HTML<span class="br0">}</span><span class="br0">{</span>00A500<span class="br0">}</span><br>
+                                                    \definecolor<span class="br0">{</span>creeper_darkgreen<span class="br0">}</span><span class="br0">{</span>HTML<span class="br0">}</span><span class="br0">{</span><span class="nu0">255522</span><span class="br0">}</span><br>
+                                                    <br>
+                                                    \begin<span class="br0">{</span>luacode<span class="sy0">*</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> draw_coordinate_system<span class="br0">(</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex<span class="sy0">.</span>sprint<span class="br0">(</span><span class="st0">"<span class="es1">\\</span>draw[white!50!gray,thick,-&gt;] (0,0,0) -- "</span> <span class="sy0">..</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"(3,0,0) node[text=white!50!gray,anchor=north east]{$x$};"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex<span class="sy0">.</span>sprint<span class="br0">(</span><span class="st0">"<span class="es1">\\</span>draw[white!50!gray,thick,-&gt;] (0,0,0) -- "</span> <span class="sy0">..</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"(0,3,0) node[text=white!50!gray,anchor=west]{$y$};"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex<span class="sy0">.</span>sprint<span class="br0">(</span><span class="st0">"<span class="es1">\\</span>draw[white!50!gray,thick,-&gt;] (0,0,0) -- "</span> <span class="sy0">..</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"(0,0,3) node[text=white!50!gray,anchor=south]{$z$};"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> matrix_scalar_multiplication<span class="br0">(</span>matrix<span class="sy0">,</span> scalar<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> rows <span class="sy0">=</span> <span class="sy0">#</span>matrix<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> cols <span class="sy0">=</span> <span class="sy0">#</span>matrix<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> tmp_matrix <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span> rows <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmp_matrix<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> j <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span> cols <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmp_matrix<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">=</span> matrix<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">*</span> scalar<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> tmp_matrix<br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> shift_coordinates<span class="br0">(</span>matrix<span class="sy0">,</span> array<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> matrix_rows <span class="sy0">=</span> <span class="sy0">#</span>matrix<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> matrix_cols <span class="sy0">=</span> <span class="sy0">#</span>matrix<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> array_length <span class="sy0">=</span> <span class="sy0">#</span>array<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> tmp_matrix <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> matrix_cols <span class="sy0">==</span> array_length <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span> matrix_rows <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmp_matrix<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> j <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span> matrix_cols <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmp_matrix<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">=</span> matrix<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">+</span> array<span class="br0">[</span>j<span class="br0">]</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> tmp_matrix<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">else</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw4">nil</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> color<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> side_1 <span class="sy0">=</span> <span class="br0">{</span><span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> side_2 <span class="sy0">=</span> <span class="br0">{</span><span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> side_3 <span class="sy0">=</span> <span class="br0">{</span><span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> side_4 <span class="sy0">=</span> <span class="br0">{</span><span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> side_5 <span class="sy0">=</span> <span class="br0">{</span><span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> side_6 <span class="sy0">=</span> <span class="br0">{</span><span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">}</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> cube_sides <span class="sy0">=</span> <span class="br0">{</span>side_1<span class="sy0">,</span> side_2<span class="sy0">,</span> side_3<span class="sy0">,</span> side_4<span class="sy0">,</span> side_5<span class="sy0">,</span> side_6<span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> tex_cube <span class="sy0">=</span> <span class="st0">""</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">#</span>cube_sides <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex_cube <span class="sy0">=</span> tex_cube <span class="sy0">..</span> <span class="st0">"<span class="es1">\\</span>draw[ultra thin, fill="</span> <span class="sy0">..</span> color <span class="sy0">..</span> <span class="st0">"] "</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> current_side <span class="sy0">=</span> matrix_scalar_multiplication<span class="br0">(</span>cube_sides<span class="br0">[</span>i<span class="br0">]</span><span class="sy0">,</span> <span class="nu0">0.5</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; current_side <span class="sy0">=</span> shift_coordinates<span class="br0">(</span>current_side<span class="sy0">,</span> <span class="br0">{</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="br0">}</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> current_side_rows <span class="sy0">=</span> <span class="sy0">#</span>current_side<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> current_side_cols <span class="sy0">=</span> <span class="sy0">#</span>current_side<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> j <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span> current_side_rows <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> k <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span> current_side_cols <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> k <span class="sy0">==</span> <span class="nu0">1</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex_cube <span class="sy0">=</span> tex_cube <span class="sy0">..</span> <span class="st0">"("</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex_cube <span class="sy0">=</span> tex_cube <span class="sy0">..</span> current_side<span class="br0">[</span>j<span class="br0">]</span><span class="br0">[</span>k<span class="br0">]</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> k <span class="sy0">~=</span> current_side_cols <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex_cube <span class="sy0">=</span> tex_cube <span class="sy0">..</span> <span class="st0">", "</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">else</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex_cube <span class="sy0">=</span> tex_cube <span class="sy0">..</span> <span class="st0">") -- "</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex_cube <span class="sy0">=</span> tex_cube <span class="sy0">..</span> <span class="st0">"cycle;"</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex<span class="sy0">.</span>sprint<span class="br0">(</span>tex_cube<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> draw_head<span class="br0">(</span>x_pos<span class="sy0">,</span> y_pos<span class="sy0">,</span> z_pos<span class="sy0">,</span> colors_array<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> x <span class="sy0">=</span> x_pos<span class="sy0">,</span> x_pos <span class="sy0">+</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> y <span class="sy0">=</span> y_pos<span class="sy0">,</span> y_pos <span class="sy0">+</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> z <span class="sy0">=</span> z_pos<span class="sy0">,</span> z_pos <span class="sy0">+</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">==</span> x_pos <span class="kw2">or</span> x <span class="sy0">==</span> x_pos <span class="sy0">+</span> <span class="nu0">7</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y <span class="sy0">==</span> y_pos <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">7</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; z <span class="sy0">==</span> z_pos <span class="kw2">or</span> z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">7</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> color_index <span class="sy0">=</span> <span class="kw3">math.random</span><span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">#</span>colors_array <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> colors_array<span class="br0">[</span>color_index<span class="br0">]</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">==</span> x_pos <span class="sy0">+</span> <span class="nu0">7</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">4</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">2</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">5</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">2</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">4</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">1</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">&gt;</span> <span class="nu0">1</span> <span class="kw2">and</span> y <span class="sy0">&lt;</span> <span class="nu0">6</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> <span class="st0">"black"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">==</span> x_pos <span class="sy0">+</span> <span class="nu0">7</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">5</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="br0">(</span>y <span class="sy0">&gt;</span> y_pos <span class="kw2">and</span> y <span class="sy0">&lt;</span> y_pos <span class="sy0">+</span> <span class="nu0">3</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">&gt;</span> y_pos <span class="sy0">+</span> <span class="nu0">4</span> <span class="kw2">and</span> y <span class="sy0">&lt;</span> y_pos <span class="sy0">+</span> <span class="nu0">7</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">4</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">1</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">6</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">4</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">2</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">2</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">5</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">2</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">5</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> colors_array<span class="br0">[</span><span class="sy0">#</span>colors_array<span class="br0">]</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> draw_leg<span class="br0">(</span>x_pos<span class="sy0">,</span> y_pos<span class="sy0">,</span> z_pos<span class="sy0">,</span> colors_array<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> x <span class="sy0">=</span> x_pos<span class="sy0">,</span> x_pos <span class="sy0">+</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> y <span class="sy0">=</span> y_pos<span class="sy0">,</span> y_pos <span class="sy0">+</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> z <span class="sy0">=</span> z_pos<span class="sy0">,</span> z_pos <span class="sy0">+</span> <span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">==</span> x_pos <span class="kw2">or</span> x <span class="sy0">==</span> x_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y <span class="sy0">==</span> y_pos <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">7</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; z <span class="sy0">==</span> z_pos <span class="kw2">or</span> z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">5</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> color_index <span class="sy0">=</span> <span class="kw3">math.random</span><span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">#</span>colors_array <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> colors_array<span class="br0">[</span>color_index<span class="br0">]</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">==</span> x_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">1</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">2</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">4</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">6</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">1</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">5</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">7</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> colors_array<span class="br0">[</span><span class="sy0">#</span>colors_array<span class="br0">]</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">==</span> x_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="sy0">+</span> <span class="nu0">1</span> <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">1</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">3</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">5</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">7</span><span class="br0">)</span><span class="br0">)</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>z <span class="sy0">==</span> z_pos <span class="kw2">and</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>y <span class="sy0">==</span> y_pos <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">2</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">4</span> <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> <span class="nu0">6</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> <span class="st0">"black"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> draw_bodypart<span class="br0">(</span>x_pos<span class="sy0">,</span> y_pos<span class="sy0">,</span> z_pos<span class="sy0">,</span> x_length<span class="sy0">,</span> y_length<span class="sy0">,</span> z_length<span class="sy0">,</span> colors_array<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> color<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> x <span class="sy0">=</span> x_pos<span class="sy0">,</span> x_pos <span class="sy0">+</span> x_length <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> y <span class="sy0">=</span> y_pos<span class="sy0">,</span> y_pos <span class="sy0">+</span> y_length <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> z <span class="sy0">=</span> z_pos<span class="sy0">,</span> z_pos <span class="sy0">+</span> z_length <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span> <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">==</span> x_pos <span class="kw2">or</span> x <span class="sy0">==</span> x_pos <span class="sy0">+</span> x_length <span class="sy0">-</span> <span class="nu0">1</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y <span class="sy0">==</span> y_pos <span class="kw2">or</span> y <span class="sy0">==</span> y_pos <span class="sy0">+</span> y_length <span class="sy0">-</span> <span class="nu0">1</span> <span class="kw2">or</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; z <span class="sy0">==</span> z_pos <span class="kw2">or</span> z <span class="sy0">==</span> z_pos <span class="sy0">+</span> z_length <span class="sy0">-</span> <span class="nu0">1</span> <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> color_index <span class="sy0">=</span> <span class="kw3">math.random</span><span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span> <span class="sy0">#</span>colors_array<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tikzcube<span class="br0">(</span>x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">,</span> colors_array<span class="br0">[</span>color_index<span class="br0">]</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">function</span> draw_creeper<span class="br0">(</span>x_rotation<span class="sy0">,</span> z_rotation<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">local</span> creeper_colors <span class="sy0">=</span> <span class="br0">{</span><span class="st0">"creeper_white"</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"creeper_lightgreen"</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"creeper_green"</span><span class="sy0">,</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"creeper_darkgreen"</span><span class="br0">}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex<span class="sy0">.</span>sprint<span class="br0">(</span><span class="st0">"<span class="es1">\\</span>tdplotsetmaincoords{"</span> <span class="sy0">..</span> x_rotation <span class="sy0">..</span> <span class="st0">"}{"</span> <span class="sy0">..</span> z_rotation <span class="sy0">..</span> <span class="st0">"}"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex<span class="sy0">.</span>sprint<span class="br0">(</span><span class="st0">"<span class="es1">\\</span>begin{tikzpicture}[tdplot_main_coords]"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">math.randomseed</span><span class="br0">(</span><span class="kw3">os.time</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; draw_leg<span class="br0">(</span><span class="sy0">-</span><span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">18</span><span class="sy0">,</span> creeper_colors<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; draw_leg<span class="br0">(</span><span class="nu0">6</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">18</span><span class="sy0">,</span> creeper_colors<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; draw_bodypart<span class="br0">(</span><span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">12</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">12</span><span class="sy0">,</span> creeper_colors<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; draw_head<span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> creeper_colors<span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">-- draw_coordinate_system()</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex<span class="sy0">.</span>sprint<span class="br0">(</span><span class="st0">"<span class="es1">\\</span>end{tikzpicture}"</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">end</span><br>
+                                                    \<span class="kw1">end</span><span class="br0">{</span>luacode<span class="sy0">*</span><span class="br0">}</span><br>
+                                                    <br>
+                                                    \begin<span class="br0">{</span>document<span class="br0">}</span><br>
+                                                    \luadirect<span class="br0">{</span>draw_creeper<span class="br0">(</span><span class="nu0">66</span><span class="sy0">,</span> <span class="nu0">135</span><span class="br0">)</span><span class="br0">}</span><br>
+                                                    \<span class="kw1">end</span><span class="br0">{</span>document<span class="br0">}</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="tag/indie/index.html" rel="tag">indie</a>
+                                    </li>
+                                    <li>
+                                        <a href="tag/rajz/index.html" rel="tag">rajz</a>
+                                    </li>
+                                    <li>
+                                        <a href="tag/tex-latex/index.html" rel="tag">TeX/LaTeX</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <h3>
+                            Mit olvasunk?
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li>
+                                    <a href="#">Boing Boing</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Canonical Design">Canonical Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Culture Japan – Your portal to Japan">Culture Japan</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Engadget">Engadget</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Fat-Pie.com :: Animation and stuff by David Firth">Fat-Pie.com</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Free Gamer – Open Source Games">Free Gamer</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Handras">Handras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hungarian Unix Portal">Hungarian Unix Portal</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="IKEA Hackers">IKEA Hackers</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Jupiter Broadcasting">Jupiter Broadcasting</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Keleti Szél">Keleti Szél</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Napirajz – Súlyosbítva azt, ami amúgy is.">Napirajz</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="plastik media">Plastik média</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="PROHARDVER! – Az Online PC Magazin">PROHARDVER!</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tokyo Times – Photographs from a small group of islands">Tokyo Times</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Twitch">Twitch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>
+                            Kategóriák
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li class="cat-item cat-item-3">
+                                    <a href="category/a-blog/index.html">a blog</a> (10)
+                                </li>
+                                <li class="cat-item cat-item-4">
+                                    <a href="category/alkotunk/index.html">alkotunk</a> (37)
+                                </li>
+                                <li class="cat-item cat-item-6">
+                                    <a href="category/animacio/index.html">animáció</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-7">
+                                    <a href="category/anime/index.html">anime</a> (9)
+                                </li>
+                                <li class="cat-item cat-item-8">
+                                    <a href="category/apple/index.html">Apple</a> (2)
+                                </li>
+                                <li class="cat-item cat-item-15">
+                                    <a href="category/film/index.html">film</a> (36)
+                                </li>
+                                <li class="cat-item cat-item-17">
+                                    <a href="category/foto/index.html">fotó</a> (18)
+                                </li>
+                                <li class="cat-item cat-item-18">
+                                    <a href="category/gizmo/index.html">gizmó</a> (48)
+                                </li>
+                                <li class="cat-item cat-item-20">
+                                    <a href="category/hardver/index.html">hardver</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-21">
+                                    <a href="category/holiday/index.html">holiday</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-36">
+                                    <a href="category/humor/index.html">humor</a> (14)
+                                </li>
+                                <li class="cat-item cat-item-26">
+                                    <a href="category/ismeretterjeszto/index.html">ismeretterjesztő</a> (31)
+                                </li>
+                                <li class="cat-item cat-item-28">
+                                    <a href="category/japan/index.html">Japán</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-29">
+                                    <a href="category/jatek/index.html">játék</a> (35)
+                                </li>
+                                <li class="cat-item cat-item-34">
+                                    <a href="category/konyv/index.html">könyv</a> (15)
+                                </li>
+                                <li class="cat-item cat-item-35">
+                                    <a href="category/linux/index.html">Linux</a> (38)
+                                </li>
+                                <li class="cat-item cat-item-43">
+                                    <a href="category/munka/index.html">munka</a> (8)
+                                </li>
+                                <li class="cat-item cat-item-44">
+                                    <a href="category/muveszet-dizajn/index.html">művészet, dizájn</a> (34)
+                                </li>
+                                <li class="cat-item cat-item-46">
+                                    <a href="category/para/index.html">para</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-52">
+                                    <a href="category/sport/index.html">sport</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-54">
+                                    <a href="category/szoftver/index.html">szoftver</a> (88)
+                                </li>
+                                <li class="cat-item cat-item-99">
+                                    <a href="category/tv/index.html">TV</a> (1)
+                                </li>
+                                <li class="cat-item cat-item-67">
+                                    <a href="category/void/index.html">void *</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-68">
+                                    <a href="category/web2/index.html">web2</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-70">
+                                    <a href="category/zene/index.html">zene</a> (25)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copy">
+                Minden itt található tartalomra a <a title="Creative Commons — Attribution-NonCommercial-ShareAlike 2.5 Hungary" href="#" rel="copyright">Creative<br>
+                Commons 2.5</a> licencfeltételek érvényesek.
+            </p>
+            <p class="credits">
+                Dizájn: <a href="#" title="WPSHOWER - Free wordpress themes">Wpshower</a> & <a href="#" title="Reveal this e-mail address">szantaii</a>.
+            </p>
+        </div>
+    </body>
+</html>

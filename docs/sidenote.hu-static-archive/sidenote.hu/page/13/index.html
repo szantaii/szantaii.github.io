@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            sidenote | Oldal 13
+        </title>
+        <link rel="shortcut icon" href="../../wp-content/themes/sidenoteminimal/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/sidenoteminimal/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/sidenoteminimal/pagenavi-css.css">
+        <link rel="stylesheet" id="codecolorer-css" href="../../wp-content/plugins/codecolorer/codecolorer.css%3Fver=0.9.11.css" type="text/css" media="screen">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header clear">
+                <div class="logo">
+                    <a title="http://sidenote.hu/" href="../../index.html">http://sidenote.hu/</a>
+                </div>
+                <h1>
+                    <a title="sidenote" href="../../index.html">sidenote</a>
+                </h1>
+                <div class="menu">
+                    <ul id="menu-header" class="menu">
+                        <li id="menu-item-4317" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-4317">
+                            <a title="Címlap" href="../../index.html">Címlap</a>
+                        </li>
+                        <li id="menu-item-7810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7810">
+                            <a title="Projektek" href="../../index.html%3Fp=7396.html">Projektek</a>
+                        </li>
+                        <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319">
+                            <a title="Rólunk" href="../../index.html%3Fp=1345.html">Rólunk</a>
+                        </li>
+                        <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318">
+                            <a title="Archívum" href="../../index.html%3Fp=284.html">Archívum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form id="searchform" name="searchform">
+                        <fieldset disabled>
+                            <input type="text" value="Keresés" disabled>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="middle clear">
+                <div id="content">
+                    <div class="clear post-3856 post type-post status-publish format-standard hentry category-alkotunk category-szoftver tag-tipografia" id="post_3856">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3856.html" title="fontscreenshot" rel="bookmark">fontscreenshot</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. szeptember 24. 12:54
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/alkotunk/index.html" rel="category tag">alkotunk</a>, <a href="../../category/szoftver/index.html" rel="category tag">szoftver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Az előbb írtam egy rövid shell scriptet, ami nem csinál mást, mint egy könyvtáron belül (és annak az alkönyvtárain belül) levő fontokról a <em>FontForge</em> program <em>fontimage</em> appjával screenshotokat készít. Vagyis az összes betűtípusról egyszerűen és gyorsan lehet screenshotot csinálni.
+                            </p>
+                            <p>
+                                Egyelőre csak a TrueType és az OpenType fontokról készít screenshotot, de gondolom a <em>FontForge</em> elboldogul mással is, a scriptben pedig csak egy regexpet kell átírni, hogy mást is támogasson. Hát nem csodás?! :) A forráskód alatti linken letölthető a cucc, de nyugodtan lehet kopipésztelni is.
+                            </p>
+                            <div class="codecolorer-container bash dawn" style="overflow:auto;white-space:nowrap;">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="line-numbers">
+                                                <div>
+                                                    1<br>
+                                                    2<br>
+                                                    3<br>
+                                                    4<br>
+                                                    5<br>
+                                                    6<br>
+                                                    7<br>
+                                                    8<br>
+                                                    9<br>
+                                                    10<br>
+                                                    11<br>
+                                                    12<br>
+                                                    13<br>
+                                                    14<br>
+                                                    15<br>
+                                                    16<br>
+                                                    17<br>
+                                                    18<br>
+                                                    19<br>
+                                                    20<br>
+                                                    21<br>
+                                                    22<br>
+                                                    23<br>
+                                                    24<br>
+                                                    25<br>
+                                                    26<br>
+                                                    27<br>
+                                                    28<br>
+                                                    29<br>
+                                                    30<br>
+                                                    31<br>
+                                                    32<br>
+                                                    33<br>
+                                                    34<br>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="bash codecolorer">
+                                                    <span class="co0">#!/bin/bash</span><br>
+                                                    <br>
+                                                    <span class="kw2">which</span> fontimage <span class="sy0">&gt;</span> <span class="sy0">/</span>dev<span class="sy0">/</span>null<br>
+                                                    <br>
+                                                    <span class="kw1">if</span> <span class="br0">[</span><span class="br0">[</span> <span class="re4">$?</span> <span class="sy0">!</span>= <span class="nu0">0</span> <span class="br0">]</span><span class="br0">]</span><br>
+                                                    <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; <span class="kw3">echo</span> <span class="st0">"The fontimage program is needed to generate screenshots from fonts.<br>
+                                                    fontimage can be found either in the fontforge or in the fontforge-nox packages.<br>
+                                                    Or fontimage is not contained by your PATH enviroment variable."</span><br>
+                                                    &nbsp; &nbsp; <span class="kw3">exit</span> <span class="nu0">1</span><br>
+                                                    <span class="kw1">fi</span><br>
+                                                    <br>
+                                                    <span class="co0"># fontscreenshot &lt; directory &gt;</span><br>
+                                                    <span class="kw1">function</span> fontscreenshot<span class="br0">(</span><span class="br0">)</span><br>
+                                                    <span class="br0">{</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw3">local</span> <span class="re2">DEFAULT_DIRECTORY</span>=<span class="st0">"/usr/share/fonts/"</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw3">local</span> <span class="re2">DIRECTORY</span>=<span class="co1">${1:-$DEFAULT_DIRECTORY}</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw3">local</span> <span class="re2">FILE</span>=<span class="st0">""</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">[</span><span class="br0">[</span> <span class="st0">"<span class="es2">$DIRECTORY</span>"</span> <span class="sy0">!</span>= <span class="sy0">*/</span> <span class="br0">]</span><span class="br0">]</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">then</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="re2">DIRECTORY</span>=<span class="st0">"<span class="es3">${DIRECTORY}</span>/"</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">fi</span><br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; <span class="kw2">find</span> <span class="st0">"<span class="es2">$DIRECTORY</span>"</span> <span class="re5">-regex</span> <span class="st0">".*\(otf\|ttf\)$"</span> <span class="sy0">|</span> <span class="kw1">while</span> <span class="kw2">read</span> FILE;<br>
+                                                    &nbsp; &nbsp; <span class="kw1">do</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; fontimage <span class="re1">$FILE</span> <span class="nu0">2</span><span class="sy0">&gt;</span> <span class="sy0">/</span>dev<span class="sy0">/</span>null <span class="co0"># error messages redirected to the void</span><br>
+                                                    &nbsp; &nbsp; <span class="kw1">done</span><br>
+                                                    <span class="br0">}</span><br>
+                                                    <br>
+                                                    fontscreenshot <span class="re4">$1</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>
+                                „Forráskód” targéza: <a href="../../wp-content/uploads/2010/09/fontscreenshot.tar.gz" title="fontscreenshot">fontscreenshot</a>.
+                            </p>
+                            <p>
+                                Konstruktív véleményeteket a hozzászólásoknál várom, és ha netán elrontottam volna valamit, akkor is toljatok egy kommentet, vagy bombázhattok emailekkel is (elérhetőség a <a href="#" title="sidenote » Rólunk">Rólunk oldalon</a>).
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="../../tag/tipografia/index.html" rel="tag">tipográfia</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear post-3759 post type-post status-publish format-standard hentry category-film category-gizmo category-void category-zene tag-video" id="post_3759">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3759.html" title="Kisfilmek a nagyvilágból" rel="bookmark">Kisfilmek a nagyvilágból</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. augusztus 29. 18:30
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/film/index.html" rel="category tag">film</a>, <a href="../../category/gizmo/index.html" rel="category tag">gizmó</a>, <a href="../../category/void/index.html" rel="category tag">void *</a>, <a href="../../category/zene/index.html" rel="category tag">zene</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Mostanra gyakorlatilag elkerülhetetlen, hogy a neten lépten-nyomon ne botoljunk bele videókba, kivéve talán azoknak, akik csak <a href="https://en.wikipedia.org/wiki/Lynx_%28web_browser%29" title="Lynx (web browser) - Wikipedia, the free encyclopedia">Lynx-et</a>, vagy egyéb szöveges böngészőt használnak (melyek, megjegyzem, sok esetben nagyon hasznosak, esetenként életmentőek).
+                            </p>
+                            <p>
+                                Szóval két rövidfilmet, vagy videót szeretnék megosztani veletek. Az elmúlt két-három hónap alatt ezek voltak azok, amik olyan „atyaég” reakciót váltottak ki belőlem. Negyed év alatt kettő nem tűnik soknak, de tulajdonképpen nem is kevés, örülök, hogy van egyáltalán ez a kettő.
+                            </p>
+                            <p>
+                                Az első kisfilm egy IBM self-promó videó, amiben egy <em>Jeopardy!</em>-t játszó <a href="https://researcher.watson.ibm.com/researcher/view_group.php?id=2099" title="IBM - Research: Jeopardy!">számítógéprendszerrel</a> ismertetnek meg minket.
+                            </p>
+                            <p>
+                                <a href="#">https://www.youtube.com/watch?v=FC3IryWr4c8</a>
+                            </p>
+                            <p>
+                                Nagyon tetszik a feszültséget fokozó zene, ami később teljesen más stílusba vált át. Engem megfogott.
+                            </p>
+                            <p>
+                                A második videó személyesebb hangvételű: egy <a href="https://www.chabottengineering.com/" title="shinya kimura | @ chabott engineering">Shinya Kimura</a> nevű fickóról szól, aki motorokat készít. Ő tervezi és az utolsó darabig ő formálja az alkatrészeket, amíg el nem készül egy-egy alkotással. Amint említettem, nagyon személyes ez a darab, és ilyen jó hanggal netes videóban még nem találkoztam.
+                            </p>
+                            <p>
+                                <a href="#">https://www.youtube.com/watch?v=Qx0WNEUm-MY</a>
+                            </p>
+                            <p>
+                                A vágás csodálatos mindkettőnél, tekintve, hogy egészen rövidek ezek a kisfilmek/videók. Sok a vágás, de nem ész nélkül vannak összedobva, hanem nem tudom megmagyarázni hogyan, de jól (és kész).
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="../../tag/video/index.html" rel="tag">videó</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear post-3732 post type-post status-publish format-standard hentry category-japan category-zene tag-tokio tag-video" id="post_3732">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3732.html" title="Philip Bloom – Alone in Tokyo" rel="bookmark">Philip Bloom – Alone in Tokyo</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. augusztus 13. 12:56
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/japan/index.html" rel="category tag">Japán</a>, <a href="../../category/zene/index.html" rel="category tag">zene</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                <a href="#">https://vimeo.com/973337</a>
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="../../tag/tokio/index.html" rel="tag">Tokió</a>
+                                    </li>
+                                    <li>
+                                        <a href="../../tag/video/index.html" rel="tag">videó</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear post-3694 post type-post status-publish format-standard hentry category-alkotunk category-foto tag-termeszet" id="post_3694">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3694.html" title="Villámlás" rel="bookmark">Villámlás</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. augusztus 4. 18:12
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/alkotunk/index.html" rel="category tag">alkotunk</a>, <a href="../../category/foto/index.html" rel="category tag">fotó</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                A tegnap esti vihar alatt, ami végre elérte Budapestet is, ezt az egy villámot sikerült elkapnom, pedig mentségemre legyen mondva, sokat próbálkoztam.
+                            </p>
+                            <p>
+                                <a href="../../wp-content/uploads/2010/08/2010_08_03_villam.png"><img src="../../wp-content/uploads/2010/08/2010_08_03_villam-620x365.png" alt="" title="Villámlás" width="620" height="365" class="alignnone size-large wp-image-3695" border="1" srcset="../../wp-content/uploads/2010/08/2010_08_03_villam-620x365.png 620w, ../../wp-content/uploads/2010/08/2010_08_03_villam-200x117.png 200w, ../../wp-content/uploads/2010/08/2010_08_03_villam-305x179.png 305w, ../../wp-content/uploads/2010/08/2010_08_03_villam.png 1024w" sizes="(max-width: 620px) 100vw, 620px"></a>
+                            </p>
+                            <p>
+                                Az elmúlt néhány hétben többször próbáltam villámot fotózni, fél éjszakákat töltöttem a szabadban sikertelenül, aztán tegnap este az erkélyről mégis sikerült egyet elkapni. Nem lett ugyan a legjobb, de esett, párás volt a levegő és csak egy noname vacak fényképezőgép állt a rendelkezésemre. Ennyit tudtam kihozni belőle, remélem azért tetszik.
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="../../tag/termeszet/index.html" rel="tag">természet</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear post-3582 post type-post status-publish format-standard hentry category-film category-japan category-void" id="post_3582">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3582.html" title="Shinboru (2009)" rel="bookmark">Shinboru (2009)</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. július 25. 19:57
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/film/index.html" rel="category tag">film</a>, <a href="../../category/japan/index.html" rel="category tag">Japán</a>, <a href="../../category/void/index.html" rel="category tag">void *</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Csütörtök este volt szerencsém részt venni egy ázsiaifilm-buziknak tartott privát vetítésen, ahol <a href="https://www.imdb.com/name/nm1035719/" title="Hitoshi Matsumoto">Hitoshi Matsumoto</a>, a <a href="../../index.html%3Fp=1317.html" title="sidenote » Dai-Nipponjin (2007)">Dai-Nipponjin</a> rendezőjének legújabb filmjét a Shinboru-t (Symbol-t) láttuk. Tavaly ősszel láttam az első teasert, ami egyből felkeltette az érdeklődésemet, tekintve, hogy a Dai-Nipponjin is eszméletlen volt. Az alábbi trailer megtekintését egyébként erősen ajánlom, mivel ez nem olyan, ami bármit is előre elárulna, de – mint az előbb írtam – felcsigázza az érdeklődést. Akit a trailer megfogott az ugorjon a lenti kép alá, mert egy kissé spoileres leszek.
+                            </p>
+                            <p>
+                                <a href="#">https://www.youtube.com/watch?v=nnqIhrmS0iI</a>
+                            </p>
+                            <p>
+                                Matsumoto egy ablak nélküli, fehér szobában ébred, és fogalma sincs, hogy mi történt vele. Az egyik falon talál egy kis kitüremkedést, megnyomja, a falakból pedig kinő több száz puttó, amik nevetnek, majd mind visszahúzódnak a falakba, csak a pöcsük marad kinn. Hirtelen váltásokkal operál a film, mert tulajdonképpen két, látszólag független történetet követünk. A másik sztori egy mexikói kisvárosban játszódik: egy pankrátor és családja egy napját látjuk. Matsumoto látszólag valami fura világba (egy kísérletbe) került. Mindig mikor megnyomja egy puttó pöcsét, valami történik: szusi esik ki a falból, vagy egy afrikai fickó teljes harci díszben fut át a szobán, vagy épp egy elérhetetlen ajtó nyílik ki. Eközben Escargotman (Csigaember?), a pankrátor kövér kisfiát szekálják a suliban, hogy az apja úgysem nyer aznap este. Matsumoto tanul, fejlődik. A pankrátor megérkezik a „munkahelyére”, és bemelegít. Folyamatosak a váltások, és a film utolsó fél óráját nem lehet szavakkal leírni, legalábbis én nem tudom leírni, mert leírhatatlan. :)
+                            </p>
+                            <p>
+                                Remélem, hogy nem voltam túl zavaros, de szándékosan kevertem össze a szálakat, és nem tagoltam őket külön bekezdésekre, próbáltam a témák közötti éles kontrasztot hangsúlyozni.
+                            </p>
+                            <p>
+                                <img src="../../wp-content/uploads/2010/07/shinboru.jpg" alt="" title="Shinboru" width="620" height="521" class="alignnone size-full wp-image-3585" border="0" srcset="../../wp-content/uploads/2010/07/shinboru.jpg 620w, ../../wp-content/uploads/2010/07/shinboru-200x168.jpg 200w, ../../wp-content/uploads/2010/07/shinboru-305x256.jpg 305w" sizes="(max-width: 620px) 100vw, 620px">
+                            </p>
+                            <p>
+                                Hosszú ideje ez a legjobb film, amit láttam. Valószínűleg a héten megnézem az Inception-t, most pedig mindjárt benyomom Jim Jarmusch The Limits of Control című művét, amit ősszel láttam már, de egyszerűen fantasztikusan lassú és hangulatos, ezért megint megnézem. Szóval a héten valószínűleg jön majd még néhány filmes írás.
+                            </p>
+                            <p>
+                                Visszatérve a Symbol-ra: csodálatos, lebilincselő és végtelenül érdekes. Hitoshi Matsumoto egy zseni.
+                            </p>
+                            <div class="post_tags clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear post-3506 post type-post status-publish format-standard hentry category-jatek category-szoftver category-zene" id="post_3506">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3506.html" title="Coma" rel="bookmark">Coma</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. július 11. 11:47
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/jatek/index.html" rel="category tag">játék</a>, <a href="../../category/szoftver/index.html" rel="category tag">szoftver</a>, <a href="../../category/zene/index.html" rel="category tag">zene</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                <a href="https://www.newgrounds.com/portal/view/541124" title="Coma"><img src="../../wp-content/uploads/2010/07/coma_screenshot.png" alt="" title="Coma" width="550" height="400" class="alignnone size-full wp-image-3511" border="1" srcset="../../wp-content/uploads/2010/07/coma_screenshot.png 550w, ../../wp-content/uploads/2010/07/coma_screenshot-200x145.png 200w, ../../wp-content/uploads/2010/07/coma_screenshot-305x221.png 305w" sizes="(max-width: 550px) 100vw, 550px"></a>
+                            </p>
+                            <blockquote>
+                                <p>
+                                    In the puzzle platformer <a href="https://www.newgrounds.com/portal/view/541124" title="Coma">Coma</a> you play as Pete, a friendly little creature who is on a search for his missing sister. During your adventure you’ll meet other inhabitants of the outside world, some of them requiring your help before returning the favor with an item or a piece of advice.
+                                </p>
+                                <p>
+                                    Nearly everything is controlled using the arrow keys, and the only time you’ll have to switch to the mouse is when picking a response during a conversation. Occasionally it can be hard to tell whether certain platforms are tangible or not, and a couple of interactive objects can be tough to spot, but even if you had difficulties with a puzzle or two it still won’t take you more than half an hour to beat the entire game.
+                                </p>
+                                <p>
+                                    Forrás: <a href="#" title="IndieGames.com - The Weblog - Browser Game Pick: Coma (Thomas Brush)">IndieGames.com</a>
+                                </p>
+                            </blockquote>
+                            <p>
+                                <a href="https://atmosgames.newgrounds.com/">Thomas Brush</a> – <a href="https://www.newgrounds.com/audio/listen/345428">Red Wind Theme</a>
+                            </p>
+                            <blockquote>
+                                <p>
+                                    The graphics, the music, the story, the gameplay… wonderful!
+                                </p>
+                            </blockquote>
+                            <p>
+                                És valóban.
+                            </p>
+                            <div class="post_tags clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear post-3453 post type-post status-publish format-standard hentry category-gizmo category-muveszet-dizajn tag-tipografia tag-ubuntu" id="post_3453">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3453.html" title="Ubuntu font" rel="bookmark">Ubuntu font</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. július 9. 10:49
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/gizmo/index.html" rel="category tag">gizmó</a>, <a href="../../category/muveszet-dizajn/index.html" rel="category tag">művészet, dizájn</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Hónapokkal ezelőtt írtam arról, hogy az <a href="../../index.html%3Fp=2932.html" title="sidenote » Az Ubuntu új arca">Ubuntu változtat a brandjén</a>. A <a href="https://www.daltonmaag.com/" title="Fonts and logos for leading brands - Dalton Maag">Dalton Maag</a> azóta is folyamatosan fejleszti az Ubuntu betűtípusát, melyet valószínűleg a 10.10-es kiadással vezetnek be a desktopon.
+                            </p>
+                            <p>
+                                Az alábbi diasor némi betekintést nyújt a leendő default font dizájnjába, de ha valaki még többet szeretne megtudni a fejlesztésről, akkor az Ubuntu Developer Summit-en készül felvételen megnézheti Bruno Maag első, <a href="#" title="UDS-M Plenary Wednesday">bevezető</a> (34:45-höz kell tekerni, ott kezdődik) és második, <a href="#" title="UDS-M-Making-Beautiful-Fonts">teljes előadását</a>.
+                            </p>
+                            <p>
+                                <a href="#">https://www.daltonmaag.com/docs/FontDevelopment.pdf</a>
+                            </p>
+                            <p>
+                                Az <a href="https://arstechnica.com/information-technology/2010/07/first-look-new-ubuntu-font-boosts-linux-typography/" title="First look: new Ubuntu font boosts Linux typography">Ars Technica is lecsekkolta</a> az új betűtípust. Íme, itt egy idézet és egy kép tőlük:
+                            </p>
+                            <blockquote>
+                                <p>
+                                    Canonical’s new Ubuntu font will ensure that Ubuntu users have great typography out of the box without having to install an alternate default font. The current version that is available through the beta is still incomplete. The bold weight is still being designed and isn’t available yet. When the font is complete and ready for widespread use, Canonical intends to distribute it under an open license so that it can be modified and redistributed.
+                                </p>
+                            </blockquote>
+                            <p>
+                                <img src="../../wp-content/uploads/2010/07/ubuntu-font.png" alt="" title="Ubuntu font" width="492" height="410" class="alignnone size-full wp-image-3472" border="0" srcset="../../wp-content/uploads/2010/07/ubuntu-font.png 492w, ../../wp-content/uploads/2010/07/ubuntu-font-200x166.png 200w, ../../wp-content/uploads/2010/07/ubuntu-font-305x254.png 305w" sizes="(max-width: 492px) 100vw, 492px"><br>
+                                Forrás: <a href="https://arstechnica.com/information-technology/2010/07/first-look-new-ubuntu-font-boosts-linux-typography/" title="First look: new Ubuntu font boosts Linux typography">Ars Technica</a>
+                            </p>
+                            <p>
+                                A slide-ok és a képek alapján nekem nagyon tetszik az új font. A tegnapelőtt indult Ubuntu tagoknak szóló privát bétateszt után valószínűleg augusztus 8-án kezdődik a publikus béta, és ha minden jól megy, akkor az Ubuntu 10.10-ben már ez lesz a default.
+                            </p>
+                            <p>
+                                További infók a <a href="#" title="The Ubuntu Font «  Canonical Design">Canonical Design blogposztjában</a>.
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="../../tag/tipografia/index.html" rel="tag">tipográfia</a>
+                                    </li>
+                                    <li>
+                                        <a href="../../tag/ubuntu/index.html" rel="tag">Ubuntu</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear post-3317 post type-post status-publish format-standard hentry category-animacio category-ismeretterjeszto tag-video" id="post_3317">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3317.html" title="Szánj erre tíz percet az életedből, érdemes…" rel="bookmark">Szánj erre tíz percet az életedből, érdemes…</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. június 26. 16:06
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/animacio/index.html" rel="category tag">animáció</a>, <a href="../../category/ismeretterjeszto/index.html" rel="category tag">ismeretterjesztő</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Dan Pink Drive című előadását illusztrálja egy szőrös férfikéz tíz percen keresztül. Extrém szemléletes és nagyon jó.
+                            </p>
+                            <p>
+                                <a href="https://www.youtube.com/watch?v=u6XAPnuFjJc">https://www.youtube.com/watch?v=u6XAPnuFjJc</a>
+                            </p>
+                            <p>
+                                Vélemény?
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="../../tag/video/index.html" rel="tag">videó</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear post-3306 post type-post status-publish format-standard hentry category-a-blog" id="post_3306">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3306.html" title="Elköltöztünk" rel="bookmark">Elköltöztünk</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. június 25. 15:57
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/a-blog/index.html" rel="category tag">a blog</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Akik az elmúlt napokban felkeresték a sidenote-ot, azok az alábbi képpel találták magukat szembe:
+                            </p>
+                            <p>
+                                <img src="../../wp-content/uploads/2010/06/sidenote_atmeneti.jpg" alt="" title="sidenote_atmeneti" width="620" height="314" class="alignnone size-full wp-image-3308" border="0" srcset="../../wp-content/uploads/2010/06/sidenote_atmeneti.jpg 620w, ../../wp-content/uploads/2010/06/sidenote_atmeneti-200x101.jpg 200w, ../../wp-content/uploads/2010/06/sidenote_atmeneti-305x154.jpg 305w" sizes="(max-width: 620px) 100vw, 620px">
+                            </p>
+                            <p>
+                                Ennek az az egyszerű oka, hogy az előző tárhelyszolgáltatónkat hétfő reggelre feltörték, köztük a sidenote-ot is. Nem ez volt az első eset, hogy hasonló történt, többször távolítottunk el vírust az oldalról, melyet nem mi helyeztünk el. Aztán valamikor még májusban volt egy két napos leállás, amikor a korábbi szolgáltatónk teljesen újrahúzta a rendszerét, mondván, hogy tök vírusos az egész, és hogy a továbbiakban ez ne így legyen. Ehhez képest hétfő reggel ez a kép fogadott engem itt a sidenote-on:
+                            </p>
+                            <p>
+                                <img src="../../wp-content/uploads/2010/06/sidenote_hacked.jpg" alt="" title="sidenote_hacked" width="620" height="339" class="alignnone size-full wp-image-3313" border="0" srcset="../../wp-content/uploads/2010/06/sidenote_hacked.jpg 620w, ../../wp-content/uploads/2010/06/sidenote_hacked-200x109.jpg 200w, ../../wp-content/uploads/2010/06/sidenote_hacked-305x166.jpg 305w" sizes="(max-width: 620px) 100vw, 620px">
+                            </p>
+                            <p>
+                                Gyorsan rendbe tettem az oldalt, minden scriptet leszedtem, felcsatoltam az ftp-t fájlrendszerként, lenyomtam rajta egy víruskeresést is, szóval megtisztítottam az egészet. Aztán gondoltam felhívom a szolgáltatót, hogy mi a helyzet. Meg akartam nézni az ő honlapjukat, de azon is ugyanez a „hacked by akárki” felirat fogadott. Gyorsan előbányásztam egy számlát, amin megvolt a telefonszám. Felhívtam és elmondtam, hogy mi a tényállás. Az egészben az a szép, hogy ha nem hívom fel őket, akkor lehet, hogy még órákig úgy maradt volna minden ahogy, ugyanis tőlem tudták meg, hogy feltörték őket és az általuk hosztolt oldalakat.
+                            </p>
+                            <p>
+                                Ez finoman szólva is amatörizmus, szóval Reddel úgy döntöttünk, hogy mindezek után tárhelyszolgáltatót váltunk. Ezzel és különböző ügyes-bajos dolgok megoldásával telt el ez a néhány nap, de mostantól újra teljes gőzzel robog a sidenote.
+                            </p>
+                            <p>
+                                A regisztrált felhasználóinkat sikerült átmenteni a régi oldalról, ők mindannyian új jelszavakat kaptak a mai délután folyamán.
+                            </p>
+                            <div class="post_tags clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear post-3199 post type-post status-publish format-standard hentry category-alkotunk category-szoftver tag-rajz" id="post_3199">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="../../index.html%3Fp=3199.html" title="Kurzorlenyomat" rel="bookmark">Kurzorlenyomat</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="../../index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2010. május 15. 19:13
+                                </div>
+                                <div class="post_categories">
+                                    <a href="../../category/alkotunk/index.html" rel="category tag">alkotunk</a>, <a href="../../category/szoftver/index.html" rel="category tag">szoftver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                <a href="../../wp-content/uploads/2010/05/egermozgas.png"><img src="../../wp-content/uploads/2010/05/egermozgas-620x348.png" alt="" title="Egérmozgás" width="620" height="348" class="alignnone size-large wp-image-3200" border="0"></a>
+                            </p>
+                            <p>
+                                A fenti képet az <a href="https://iographica.com/">IOGraph</a> nevű program késztítette. Az egész lényege, hogy az asztal felbontásának megfelelően végigköveti az egérmozgást, és megrajzolja a az egérmutató útvonalát. A képen látható fekete pöttyök azok a helyek, ahol az egér sokáig időzött két mozgatás között.
+                            </p>
+                            <p>
+                                <img src="../../wp-content/uploads/2010/05/iograph.png" alt="" title="IOGraph" width="481" height="387" class="alignnone size-full wp-image-3202" border="0">
+                            </p>
+                            <p>
+                                A képen látható időintervallum és a felette látható szöveg ne tévesszen meg senkit. Arra az egy órára amíg nem használtam a gépet, addig nyomtam egy pause-t, hogy ne legyen gigantikus fekete paca a képen. Szóval a felső, már-már művészi képet pontosan egy órányi netezés közbeni egerezés során rajzolódott ki a winuxos gépemen. Nem kell félni, a szoftver elérhető Linuxra, Winuxra és Macuxra is, de tulajdonképpen amire van Java VM azon valószínű, hogy menni fog.
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="../../tag/rajz/index.html" rel="tag">rajz</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <a href="../12/index.html" class="previouspostslink">Következő oldal</a><a href="../14/index.html" class="nextpostslink">Előző oldal</a>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <h3>
+                            Mit olvasunk?
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li>
+                                    <a href="#">Boing Boing</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Canonical Design">Canonical Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Culture Japan – Your portal to Japan">Culture Japan</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Engadget">Engadget</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Fat-Pie.com :: Animation and stuff by David Firth">Fat-Pie.com</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Free Gamer – Open Source Games">Free Gamer</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Handras">Handras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hungarian Unix Portal">Hungarian Unix Portal</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="IKEA Hackers">IKEA Hackers</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Jupiter Broadcasting">Jupiter Broadcasting</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Keleti Szél">Keleti Szél</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Napirajz – Súlyosbítva azt, ami amúgy is.">Napirajz</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="plastik media">Plastik média</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="PROHARDVER! – Az Online PC Magazin">PROHARDVER!</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tokyo Times – Photographs from a small group of islands">Tokyo Times</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Twitch">Twitch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>
+                            Kategóriák
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li class="cat-item cat-item-3">
+                                    <a href="../../category/a-blog/index.html">a blog</a> (10)
+                                </li>
+                                <li class="cat-item cat-item-4">
+                                    <a href="../../category/alkotunk/index.html">alkotunk</a> (37)
+                                </li>
+                                <li class="cat-item cat-item-6">
+                                    <a href="../../category/animacio/index.html">animáció</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-7">
+                                    <a href="../../category/anime/index.html">anime</a> (9)
+                                </li>
+                                <li class="cat-item cat-item-8">
+                                    <a href="../../category/apple/index.html">Apple</a> (2)
+                                </li>
+                                <li class="cat-item cat-item-15">
+                                    <a href="../../category/film/index.html">film</a> (36)
+                                </li>
+                                <li class="cat-item cat-item-17">
+                                    <a href="../../category/foto/index.html">fotó</a> (18)
+                                </li>
+                                <li class="cat-item cat-item-18">
+                                    <a href="../../category/gizmo/index.html">gizmó</a> (48)
+                                </li>
+                                <li class="cat-item cat-item-20">
+                                    <a href="../../category/hardver/index.html">hardver</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-21">
+                                    <a href="../../category/holiday/index.html">holiday</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-36">
+                                    <a href="../../category/humor/index.html">humor</a> (14)
+                                </li>
+                                <li class="cat-item cat-item-26">
+                                    <a href="../../category/ismeretterjeszto/index.html">ismeretterjesztő</a> (31)
+                                </li>
+                                <li class="cat-item cat-item-28">
+                                    <a href="../../category/japan/index.html">Japán</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-29">
+                                    <a href="../../category/jatek/index.html">játék</a> (35)
+                                </li>
+                                <li class="cat-item cat-item-34">
+                                    <a href="../../category/konyv/index.html">könyv</a> (15)
+                                </li>
+                                <li class="cat-item cat-item-35">
+                                    <a href="../../category/linux/index.html">Linux</a> (38)
+                                </li>
+                                <li class="cat-item cat-item-43">
+                                    <a href="../../category/munka/index.html">munka</a> (8)
+                                </li>
+                                <li class="cat-item cat-item-44">
+                                    <a href="../../category/muveszet-dizajn/index.html">művészet, dizájn</a> (34)
+                                </li>
+                                <li class="cat-item cat-item-46">
+                                    <a href="../../category/para/index.html">para</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-52">
+                                    <a href="../../category/sport/index.html">sport</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-54">
+                                    <a href="../../category/szoftver/index.html">szoftver</a> (88)
+                                </li>
+                                <li class="cat-item cat-item-99">
+                                    <a href="../../category/tv/index.html">TV</a> (1)
+                                </li>
+                                <li class="cat-item cat-item-67">
+                                    <a href="../../category/void/index.html">void *</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-68">
+                                    <a href="../../category/web2/index.html">web2</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-70">
+                                    <a href="../../category/zene/index.html">zene</a> (25)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copy">
+                Minden itt található tartalomra a <a title="Creative Commons — Attribution-NonCommercial-ShareAlike 2.5 Hungary" href="#" rel="copyright">Creative<br>
+                Commons 2.5</a> licencfeltételek érvényesek.
+            </p>
+            <p class="credits">
+                Dizájn: <a href="#" title="WPSHOWER - Free wordpress themes">Wpshower</a> & <a href="#" title="Reveal this e-mail address">szantaii</a>.
+            </p>
+        </div>
+    </body>
+</html>
