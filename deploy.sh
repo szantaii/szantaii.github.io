@@ -42,14 +42,20 @@ clean_deploy_directory()
     cp "${script_directory:?}/CNAME" "${deploy_directory:?}/CNAME"
 }
 
-substitute_deployment_date()
+substitute_dates()
 {
     local input_file="$1"
+    local weekday
+    local month
+    local day_of_month
+    local year
     local formatted_date
 
-    formatted_date="$(date "+%A, %B %d, %Y")"
+    IFS=':' read -r weekday month day_of_month year <<< "$(date '+%A:%B:%d:%Y')"
 
-    sed -i "s/{% date %}/${formatted_date}/g" "${input_file}"
+    formatted_date="${weekday}, ${month} $((day_of_month + 0)), ${year}"
+
+    sed -i "s/{% year %}/${year}/g;s/{% date %}/${formatted_date}/g" "${input_file}"
 }
 
 deploy()
@@ -63,7 +69,7 @@ deploy()
         cp -a "${source_path}" "${target_path}"
     done
 
-    substitute_deployment_date "${deploy_directory}/index.html"
+    substitute_dates "${deploy_directory}/index.html"
 }
 
 deploy
