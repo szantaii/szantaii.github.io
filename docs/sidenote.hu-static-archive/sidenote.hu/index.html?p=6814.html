@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            Makefile for Large LaTeX Projects / sidenote
+        </title>
+        <link rel="shortcut icon" href="wp-content/themes/sidenoteminimal/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/pagenavi-css.css">
+        <link rel="stylesheet" id="codecolorer-css" href="wp-content/plugins/codecolorer/codecolorer.css%3Fver=0.9.11.css" type="text/css" media="screen">
+        <link rel="prev" title="Sakamichi no Apollon" href="index.html%3Fp=6789.html">
+        <link rel="next" title="OS/2 Warp 4: egy kis nosztalgia" href="index.html%3Fp=6855.html">
+        <link rel="canonical" href="index.html%3Fp=6814.html">
+        <link rel="shortlink" href="index.html%3Fp=6814.html">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header clear">
+                <div class="logo">
+                    <a title="http://sidenote.hu/" href="index.html">http://sidenote.hu/</a>
+                </div>
+                <h1>
+                    <a title="sidenote" href="index.html">sidenote</a>
+                </h1>
+                <div class="menu">
+                    <ul id="menu-header" class="menu">
+                        <li id="menu-item-4317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4317">
+                            <a title="Címlap" href="index.html">Címlap</a>
+                        </li>
+                        <li id="menu-item-7810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7810">
+                            <a title="Projektek" href="index.html%3Fp=7396.html">Projektek</a>
+                        </li>
+                        <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319">
+                            <a title="Rólunk" href="index.html%3Fp=1345.html">Rólunk</a>
+                        </li>
+                        <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318">
+                            <a title="Archívum" href="index.html%3Fp=284.html">Archívum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form id="searchform" name="searchform">
+                        <fieldset disabled>
+                            <input type="text" value="Keresés" disabled>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="middle clear">
+                <div id="content">
+                    <div class="single clear post-6814 post type-post status-publish format-standard hentry category-alkotunk category-munka category-szoftver tag-tex-latex" id="post_6814">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="index.html%3Fp=6814.html" title="Makefile for Large LaTeX Projects" rel="chapter">Makefile for Large LaTeX Projects</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2012. február 4. 9:06
+                                </div>
+                                <div class="post_categories">
+                                    <a href="category/alkotunk/index.html" rel="category tag">alkotunk</a>, <a href="category/munka/index.html" rel="category tag">munka</a>, <a href="category/szoftver/index.html" rel="category tag">szoftver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                Using a makefile for large LaTeX projects is a real time saver if you don’t use LaTeX IDEs (e.g. <a href="https://www.xm1math.net/texmaker/">Texmaker</a>, <a href="https://www.tug.org/texworks/">TeXworks</a>). For example some of my friends have to log in to a central server, which provides the same LaTeX setup for everyone in their institution, to compile their documents. In this particular case using <em>make</em> is a <em>must do!</em> thing if you don’t want to fiddle around keeping track of which was the last command you executed or whether your pdf is up to date.
+                            </p>
+                            <p>
+                                <em>So, what are these makefile and make things?</em>
+                            </p>
+                            <blockquote>
+                                <p>
+                                    Make is a tool which controls the generation of executables and other non-source files of a program from the program’s source files.
+                                </p>
+                                <p>
+                                    Make gets its knowledge of how to build your program from a file called the <em>makefile</em>, which lists each of the non-source files and how to compute it from other files. When you write a program, you should write a makefile for it, so that it is possible to use Make to build and install the program.
+                                </p>
+                                <p>
+                                    […]
+                                </p>
+                                <p>
+                                    Make figures out automatically which files it needs to update, based on which source files have changed. It also automatically determines the proper order for updating files, in case one non-source file depends on another non-source file.
+                                </p>
+                            </blockquote>
+                            <p>
+                                <a href="https://www.gnu.org/software/make/">GNU Make</a>
+                            </p>
+                            <p>
+                                Here is my standard makefile template for projects utilizing <em>pdflatex</em> and <em>bibtex</em> (also downloadable at the end of the post):
+                            </p>
+                            <div class="codecolorer-container make dawn" style="overflow:auto;white-space:nowrap;">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="line-numbers">
+                                                <div>
+                                                    1<br>
+                                                    2<br>
+                                                    3<br>
+                                                    4<br>
+                                                    5<br>
+                                                    6<br>
+                                                    7<br>
+                                                    8<br>
+                                                    9<br>
+                                                    10<br>
+                                                    11<br>
+                                                    12<br>
+                                                    13<br>
+                                                    14<br>
+                                                    15<br>
+                                                    16<br>
+                                                    17<br>
+                                                    18<br>
+                                                    19<br>
+                                                    20<br>
+                                                    21<br>
+                                                    22<br>
+                                                    23<br>
+                                                    24<br>
+                                                    25<br>
+                                                    26<br>
+                                                    27<br>
+                                                    28<br>
+                                                    29<br>
+                                                    30<br>
+                                                    31<br>
+                                                    32<br>
+                                                    33<br>
+                                                    34<br>
+                                                    35<br>
+                                                    36<br>
+                                                    37<br>
+                                                    38<br>
+                                                    39<br>
+                                                    40<br>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="make codecolorer">
+                                                    <span class="co1"># Makefile for my LaTeX project</span><br>
+                                                    <br>
+                                                    <span class="co1"># LaTeX</span><br>
+                                                    LC<span class="sy0">=</span>pdflatex<br>
+                                                    <br>
+                                                    <span class="co1"># Bibtex</span><br>
+                                                    BC<span class="sy0">=</span>bibtex<br>
+                                                    <br>
+                                                    <span class="co1"># The main tex file (without extension)</span><br>
+                                                    MAIN<span class="sy0">=</span>main<br>
+                                                    <br>
+                                                    <span class="co1"># The tex files that are included in the project's main tex file</span><br>
+                                                    DEPS<span class="sy0">=./</span>tex<span class="sy0">/</span>chapter1<span class="sy0">.</span>tex <span class="sy0">./</span>tex<span class="sy0">/</span>chapter2<span class="sy0">.</span>tex <span class="sy0">./</span>tex<span class="sy0">/</span>chapter3<span class="sy0">.</span>tex<br>
+                                                    <br>
+                                                    MIDTARGET<span class="sy0">=$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>pdf<br>
+                                                    <br>
+                                                    <span class="co1"># The desired filename</span><br>
+                                                    TARGET<span class="sy0">=</span>myprojectv01<span class="sy0">.</span>pdf<br>
+                                                    <br>
+                                                    <span class="kw2">.PHONY</span><span class="sy0">:</span> clean show all<br>
+                                                    <br>
+                                                    all<span class="sy0">:</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">TARGET</span><span class="br0">)</span><br>
+                                                    <br>
+                                                    <span class="sy0">$</span><span class="br0">(</span><span class="re2">TARGET</span><span class="br0">)</span><span class="sy0">:</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">MIDTARGET</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; cp <span class="sy0">$</span><span class="br0">(</span><span class="re2">MIDTARGET</span><span class="br0">)</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">TARGET</span><span class="br0">)</span><br>
+                                                    <br>
+                                                    <span class="sy0">$</span><span class="br0">(</span><span class="re2">MIDTARGET</span><span class="br0">)</span><span class="sy0">:</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>tex <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>aux<br>
+                                                    &nbsp; &nbsp; <span class="sy0">$</span><span class="br0">(</span><span class="re2">BC</span><span class="br0">)</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>aux<br>
+                                                    &nbsp; &nbsp; <span class="sy0">$</span><span class="br0">(</span><span class="re2">LC</span><span class="br0">)</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>tex<br>
+                                                    &nbsp; &nbsp; <span class="sy0">$</span><span class="br0">(</span><span class="re2">LC</span><span class="br0">)</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>tex<br>
+                                                    <br>
+                                                    <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>aux<span class="sy0">:</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>tex <span class="sy0">$</span><span class="br0">(</span><span class="re2">DEPS</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; <span class="sy0">$</span><span class="br0">(</span><span class="re2">LC</span><span class="br0">)</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>tex<br>
+                                                    <br>
+                                                    show<span class="sy0">:</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">TARGET</span><span class="br0">)</span><br>
+                                                    &nbsp; &nbsp; xdg<span class="sy0">-</span>open <span class="re0">$&lt;</span> <span class="sy0">&</span><br>
+                                                    <br>
+                                                    clean<span class="sy0">:</span><br>
+                                                    &nbsp; &nbsp; rm <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>out <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>aux <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>toc <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>lof <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>lot <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>log \<br>
+                                                    <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>bbl <span class="sy0">$</span><span class="br0">(</span><span class="re2">MAIN</span><span class="br0">)</span><span class="sy0">.</span>blg <span class="sy0">$</span><span class="br0">(</span><span class="re2">MIDTARGET</span><span class="br0">)</span> <span class="sy0">$</span><span class="br0">(</span><span class="re2">TARGET</span><span class="br0">)</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>
+                                I won’t go into the details, but if you want to complement this makefile for using <em>latex</em> instead of pdflatex then you’ll have to create another middle target for creating the dvi file. For those who’ll use this makefile in a non-X environment don’t use the <em>show</em> target beacuse <em>xdg-open</em> is meant to be used under X.
+                            </p>
+                            <p>
+                                I think the <a href="https://www.gnu.org/software/make/manual/">GNU Make Manual</a> is detailed enough to understand what I was talking about. But feel free to <a href="#" title="Kattints egy e-mail címért!">contact me</a> if you have any questions.
+                            </p>
+                            <p>
+                                Download: <a href="wp-content/uploads/2012/02/makefile.tar.gz">makefile.tar.gz</a>
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="tag/tex-latex/index.html" rel="tag">TeX/LaTeX</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <h3>
+                            Mit olvasunk?
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li>
+                                    <a href="#">Boing Boing</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Canonical Design">Canonical Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Culture Japan – Your portal to Japan">Culture Japan</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Engadget">Engadget</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Fat-Pie.com :: Animation and stuff by David Firth">Fat-Pie.com</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Free Gamer – Open Source Games">Free Gamer</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Handras">Handras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hungarian Unix Portal">Hungarian Unix Portal</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="IKEA Hackers">IKEA Hackers</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Jupiter Broadcasting">Jupiter Broadcasting</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Keleti Szél">Keleti Szél</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Napirajz – Súlyosbítva azt, ami amúgy is.">Napirajz</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="plastik media">Plastik média</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="PROHARDVER! – Az Online PC Magazin">PROHARDVER!</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tokyo Times – Photographs from a small group of islands">Tokyo Times</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Twitch">Twitch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>
+                            Kategóriák
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li class="cat-item cat-item-3">
+                                    <a href="category/a-blog/index.html">a blog</a> (10)
+                                </li>
+                                <li class="cat-item cat-item-4">
+                                    <a href="category/alkotunk/index.html">alkotunk</a> (37)
+                                </li>
+                                <li class="cat-item cat-item-6">
+                                    <a href="category/animacio/index.html">animáció</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-7">
+                                    <a href="category/anime/index.html">anime</a> (9)
+                                </li>
+                                <li class="cat-item cat-item-8">
+                                    <a href="category/apple/index.html">Apple</a> (2)
+                                </li>
+                                <li class="cat-item cat-item-15">
+                                    <a href="category/film/index.html">film</a> (36)
+                                </li>
+                                <li class="cat-item cat-item-17">
+                                    <a href="category/foto/index.html">fotó</a> (18)
+                                </li>
+                                <li class="cat-item cat-item-18">
+                                    <a href="category/gizmo/index.html">gizmó</a> (48)
+                                </li>
+                                <li class="cat-item cat-item-20">
+                                    <a href="category/hardver/index.html">hardver</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-21">
+                                    <a href="category/holiday/index.html">holiday</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-36">
+                                    <a href="category/humor/index.html">humor</a> (14)
+                                </li>
+                                <li class="cat-item cat-item-26">
+                                    <a href="category/ismeretterjeszto/index.html">ismeretterjesztő</a> (31)
+                                </li>
+                                <li class="cat-item cat-item-28">
+                                    <a href="category/japan/index.html">Japán</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-29">
+                                    <a href="category/jatek/index.html">játék</a> (35)
+                                </li>
+                                <li class="cat-item cat-item-34">
+                                    <a href="category/konyv/index.html">könyv</a> (15)
+                                </li>
+                                <li class="cat-item cat-item-35">
+                                    <a href="category/linux/index.html">Linux</a> (38)
+                                </li>
+                                <li class="cat-item cat-item-43">
+                                    <a href="category/munka/index.html">munka</a> (8)
+                                </li>
+                                <li class="cat-item cat-item-44">
+                                    <a href="category/muveszet-dizajn/index.html">művészet, dizájn</a> (34)
+                                </li>
+                                <li class="cat-item cat-item-46">
+                                    <a href="category/para/index.html">para</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-52">
+                                    <a href="category/sport/index.html">sport</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-54">
+                                    <a href="category/szoftver/index.html">szoftver</a> (88)
+                                </li>
+                                <li class="cat-item cat-item-99">
+                                    <a href="category/tv/index.html">TV</a> (1)
+                                </li>
+                                <li class="cat-item cat-item-67">
+                                    <a href="category/void/index.html">void *</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-68">
+                                    <a href="category/web2/index.html">web2</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-70">
+                                    <a href="category/zene/index.html">zene</a> (25)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copy">
+                Minden itt található tartalomra a <a title="Creative Commons — Attribution-NonCommercial-ShareAlike 2.5 Hungary" href="#" rel="copyright">Creative<br>
+                Commons 2.5</a> licencfeltételek érvényesek.
+            </p>
+            <p class="credits">
+                Dizájn: <a href="#" title="WPSHOWER - Free wordpress themes">Wpshower</a> & <a href="#" title="Reveal this e-mail address">szantaii</a>.
+            </p>
+        </div>
+    </body>
+</html>

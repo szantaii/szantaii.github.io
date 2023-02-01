@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            Programming Conway’s Game of Life in LaTeX / sidenote
+        </title>
+        <link rel="shortcut icon" href="wp-content/themes/sidenoteminimal/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/pagenavi-css.css">
+        <link rel="stylesheet" id="codecolorer-css" href="wp-content/plugins/codecolorer/codecolorer.css%3Fver=0.9.11.css" type="text/css" media="screen">
+        <link rel="prev" title="„Hordozható time-lapse kamera Raspberry Pi-ból és ételdobozból” – Mi, mennyi, hogyan, mikor?" href="index.html%3Fp=8425.html">
+        <link rel="next" title="MISS ME?" href="index.html%3Fp=8523.html">
+        <link rel="canonical" href="index.html%3Fp=8500.html">
+        <link rel="shortlink" href="index.html%3Fp=8500.html">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header clear">
+                <div class="logo">
+                    <a title="http://sidenote.hu/" href="index.html">http://sidenote.hu/</a>
+                </div>
+                <h1>
+                    <a title="sidenote" href="index.html">sidenote</a>
+                </h1>
+                <div class="menu">
+                    <ul id="menu-header" class="menu">
+                        <li id="menu-item-4317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4317">
+                            <a title="Címlap" href="index.html">Címlap</a>
+                        </li>
+                        <li id="menu-item-7810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7810">
+                            <a title="Projektek" href="index.html%3Fp=7396.html">Projektek</a>
+                        </li>
+                        <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319">
+                            <a title="Rólunk" href="index.html%3Fp=1345.html">Rólunk</a>
+                        </li>
+                        <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318">
+                            <a title="Archívum" href="index.html%3Fp=284.html">Archívum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form id="searchform" name="searchform">
+                        <fieldset disabled>
+                            <input type="text" value="Keresés" disabled>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="middle clear">
+                <div id="content">
+                    <div class="single clear post-8500 post type-post status-publish format-standard hentry category-alkotunk category-gizmo category-ismeretterjeszto category-szoftver tag-tex-latex tag-tipografia" id="post_8500">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="index.html%3Fp=8500.html" title="Programming Conway’s Game of Life in LaTeX" rel="chapter">Programming Conway’s Game of Life in LaTeX</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2013. november 18. 10:01
+                                </div>
+                                <div class="post_categories">
+                                    <a href="category/alkotunk/index.html" rel="category tag">alkotunk</a>, <a href="category/gizmo/index.html" rel="category tag">gizmó</a>, <a href="category/ismeretterjeszto/index.html" rel="category tag">ismeretterjesztő</a>, <a href="category/szoftver/index.html" rel="category tag">szoftver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                The other day I thought about that it would be nice to program <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life" title="Conway's Game of Life - Wikipedia">Conway’s Game of Life</a> in LaTeX and create an animated PDF output. You could say that implementing the Game of Life is pretty easy. It is. But not in LaTeX, at least not for me. After using LaTeX for years I still find it hard to understand some codes and especially writing programs in “pure LaTeX”.
+                            </p>
+                            <p>
+                                Since I use PGF/TikZ fairly often I decided to use <code class="codecolorer text dawn"><span class="text">pgfmath</span></code> for the implementation. Pretty soon I got stuck, I needed to assign values to array elements, and I didn’t know how to overcome this problem in LaTeX. So I decided to ask <a href="https://tex.stackexchange.com/q/145319" title="tikz pgf - Programming Conway's Game of Life in LaTeX - TeX - LaTeX Stack Exchange">a question on TeX.SX</a>. This is the point that things get interesting.
+                            </p>
+                            <p>
+                                I asked a question with the title “Assign value to array element (PGF/TikZ)”, I also wrote that my aim was to program Conway’s Game of Life in LaTeX, and posted my initial code. Before long two answers came, and the question was renamed to “Programming Conway’s Game of Life in LaTeX”. The first answer <a href="https://tex.stackexchange.com/a/145331">implemented the Game of Life in LaTeX</a>, the second <a href="https://tex.stackexchange.com/a/145336">implemented it in LuaTeX</a>. I was stunned. Especially from the LaTeX implementation. I didn’t – and still don’t – understand the code. :) At the end I decided I should get acquainted with LuaTeX, and write <a href="https://tex.stackexchange.com/a/145463">my own solution</a> in it:
+                            </p>
+                            <p>
+                                <img src="wp-content/uploads/2013/11/glider.gif" alt="Glider" width="250" height="250" class="alignnone size-full wp-image-8506">
+                            </p>
+                            <div class="codecolorer-container latex dawn" style="overflow:auto;white-space:nowrap;height:400px;">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="line-numbers">
+                                                <div>
+                                                    1<br>
+                                                    2<br>
+                                                    3<br>
+                                                    4<br>
+                                                    5<br>
+                                                    6<br>
+                                                    7<br>
+                                                    8<br>
+                                                    9<br>
+                                                    10<br>
+                                                    11<br>
+                                                    12<br>
+                                                    13<br>
+                                                    14<br>
+                                                    15<br>
+                                                    16<br>
+                                                    17<br>
+                                                    18<br>
+                                                    19<br>
+                                                    20<br>
+                                                    21<br>
+                                                    22<br>
+                                                    23<br>
+                                                    24<br>
+                                                    25<br>
+                                                    26<br>
+                                                    27<br>
+                                                    28<br>
+                                                    29<br>
+                                                    30<br>
+                                                    31<br>
+                                                    32<br>
+                                                    33<br>
+                                                    34<br>
+                                                    35<br>
+                                                    36<br>
+                                                    37<br>
+                                                    38<br>
+                                                    39<br>
+                                                    40<br>
+                                                    41<br>
+                                                    42<br>
+                                                    43<br>
+                                                    44<br>
+                                                    45<br>
+                                                    46<br>
+                                                    47<br>
+                                                    48<br>
+                                                    49<br>
+                                                    50<br>
+                                                    51<br>
+                                                    52<br>
+                                                    53<br>
+                                                    54<br>
+                                                    55<br>
+                                                    56<br>
+                                                    57<br>
+                                                    58<br>
+                                                    59<br>
+                                                    60<br>
+                                                    61<br>
+                                                    62<br>
+                                                    63<br>
+                                                    64<br>
+                                                    65<br>
+                                                    66<br>
+                                                    67<br>
+                                                    68<br>
+                                                    69<br>
+                                                    70<br>
+                                                    71<br>
+                                                    72<br>
+                                                    73<br>
+                                                    74<br>
+                                                    75<br>
+                                                    76<br>
+                                                    77<br>
+                                                    78<br>
+                                                    79<br>
+                                                    80<br>
+                                                    81<br>
+                                                    82<br>
+                                                    83<br>
+                                                    84<br>
+                                                    85<br>
+                                                    86<br>
+                                                    87<br>
+                                                    88<br>
+                                                    89<br>
+                                                    90<br>
+                                                    91<br>
+                                                    92<br>
+                                                    93<br>
+                                                    94<br>
+                                                    95<br>
+                                                    96<br>
+                                                    97<br>
+                                                    98<br>
+                                                    99<br>
+                                                    100<br>
+                                                    101<br>
+                                                    102<br>
+                                                    103<br>
+                                                    104<br>
+                                                    105<br>
+                                                    106<br>
+                                                    107<br>
+                                                    108<br>
+                                                    109<br>
+                                                    110<br>
+                                                    111<br>
+                                                    112<br>
+                                                    113<br>
+                                                    114<br>
+                                                    115<br>
+                                                    116<br>
+                                                    117<br>
+                                                    118<br>
+                                                    119<br>
+                                                    120<br>
+                                                    121<br>
+                                                    122<br>
+                                                    123<br>
+                                                    124<br>
+                                                    125<br>
+                                                    126<br>
+                                                    127<br>
+                                                    128<br>
+                                                    129<br>
+                                                    130<br>
+                                                    131<br>
+                                                    132<br>
+                                                    133<br>
+                                                    134<br>
+                                                    135<br>
+                                                    136<br>
+                                                    137<br>
+                                                    138<br>
+                                                    139<br>
+                                                    140<br>
+                                                    141<br>
+                                                    142<br>
+                                                    143<br>
+                                                    144<br>
+                                                    145<br>
+                                                    146<br>
+                                                    147<br>
+                                                    148<br>
+                                                    149<br>
+                                                    150<br>
+                                                    151<br>
+                                                    152<br>
+                                                    153<br>
+                                                    154<br>
+                                                    155<br>
+                                                    156<br>
+                                                    157<br>
+                                                    158<br>
+                                                    159<br>
+                                                    160<br>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="latex codecolorer">
+                                                    <span class="sy0">\</span><span class="kw1">documentclass</span><span class="sy0">{</span><span class="re9">article<span class="sy0">}</span><br>
+                                                    <span class="sy0">\</span><span class="kw1">usepackage</span><span class="sy0">[</span><span class="re2">a0paper</span><span class="sy0">]{</span>geometry<span class="sy0">}</span><br>
+                                                    <br>
+                                                    <span class="sy0">\</span><span class="kw1">usepackage</span><span class="sy0">{</span>luacode<span class="sy0">}</span><br>
+                                                    <span class="sy0">\</span><span class="kw1">usepackage</span><span class="sy0">{</span>animate<span class="sy0">}</span><br>
+                                                    <span class="sy0">\</span><span class="kw1">usepackage</span><span class="sy0">{</span>tikz<span class="sy0">}</span><br>
+                                                    <span class="sy0">\</span><span class="kw1">usepackage</span><span class="sy0">{</span>xcolor<span class="sy0">}</span><br>
+                                                    <span class="sy0">\</span><span class="kw1">usepackage</span><span class="sy0">[</span><span class="re2">active, tightpage</span><span class="sy0">]{</span>preview<span class="sy0">}</span><br>
+                                                    <span class="re12">\PreviewEnvironment</span>{animateinline</span><span class="sy0">}</span><br>
+                                                    <span class="co1">%\PreviewEnvironment{tikzpicture}</span><br>
+                                                    <br>
+                                                    <span class="re12">\tikzset</span><span class="sy0">{</span><span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; cellframe/.style=<span class="sy0">{</span><span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; minimum size=5mm,<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; draw,<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; fill=white,<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; fill opacity=0<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; <span class="sy0">}</span><span class="co1">%</span><br>
+                                                    <span class="sy0">}</span><br>
+                                                    <br>
+                                                    <span class="re12">\tikzset</span><span class="sy0">{</span><span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; alivecell/.style=<span class="sy0">{</span><span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; circle,<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; inner sep=0pt,<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; minimum size=4mm,<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; fill=black<span class="co1">%</span><br>
+                                                    &nbsp; &nbsp; <span class="sy0">}</span><span class="co1">%</span><br>
+                                                    <span class="sy0">}</span><br>
+                                                    <br>
+                                                    <span class="sy0">\</span><span class="kw1">setlength</span><span class="sy0">{</span><span class="re9"><span class="re12">\PreviewBorder</span><span class="sy0">}{</span>5mm<span class="sy0">}</span><br>
+                                                    <br>
+                                                    <span class="re8">\begin</span><span class="sy0">{</span><span class="re7">document</span><span class="sy0">}</span><br>
+                                                    <br>
+                                                    <span class="re8">\begin</span><span class="sy0">{</span><span class="re7">luacode*</span><span class="sy0">}</span><br>
+                                                    &nbsp; &nbsp; iterations = 36<br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; grid = <span class="sy0">{{</span>0, 0, 0, 0, 0, 0, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 0, 0, 0, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 0, 0, 0, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 0, 1, 0, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 0, 0, 1, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 1, 1, 1, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 0, 0, 0, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 0, 0, 0, 0, 0, 0<span class="sy0">}</span>,<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">{</span>0, 0, 0, 0, 0, 0, 0, 0, 0<span class="sy0">}}</span><br>
+                                                    <span class="re8">\end</span><span class="sy0">{</span><span class="re7">luacode*</span><span class="sy0">}</span><br>
+                                                    <br>
+                                                    <span class="re8">\begin</span><span class="sy0">{</span><span class="re7">luacode*</span><span class="sy0">}</span><br>
+                                                    &nbsp; &nbsp; function evolve(grid)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; local temp = <span class="sy0">{}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; local gridsize = #grid<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; for i = 1, gridsize do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp<span class="sy0">[</span><span class="re2">i</span><span class="sy0">]</span> = <span class="sy0">{}</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for j = 1, gridsize do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp<span class="sy0">[</span><span class="re2">i</span><span class="sy0">][</span><span class="re2">j</span><span class="sy0">]</span> = 0<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; for i = 1, gridsize do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for j = 1, gridsize do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iminus = i - 1<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iplus = i + 1<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jminus = j - 1<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jplus = j + 1<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if iminus == 0 then<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iminus = gridsize<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if iplus == gridsize + 1 then<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iplus = 1<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if jminus == 0 then<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jminus = gridsize<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if jplus == gridsize + 1 then<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jplus = 1<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; neighbourcount = grid<span class="sy0">[</span><span class="re2">iminus</span><span class="sy0">][</span><span class="re2">jminus</span><span class="sy0">]</span> +<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid<span class="sy0">[</span><span class="re2">iminus</span><span class="sy0">][</span><span class="re2">j</span><span class="sy0">]</span> +<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid<span class="sy0">[</span><span class="re2">iminus</span><span class="sy0">][</span><span class="re2">jplus</span><span class="sy0">]</span> +<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid<span class="sy0">[</span><span class="re2">i</span><span class="sy0">][</span><span class="re2">jminus</span><span class="sy0">]</span> +<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid<span class="sy0">[</span><span class="re2">i</span><span class="sy0">][</span><span class="re2">jplus</span><span class="sy0">]</span> +<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid<span class="sy0">[</span><span class="re2">iplus</span><span class="sy0">][</span><span class="re2">jminus</span><span class="sy0">]</span> +<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid<span class="sy0">[</span><span class="re2">iplus</span><span class="sy0">][</span><span class="re2">j</span><span class="sy0">]</span> +<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid<span class="sy0">[</span><span class="re2">iplus</span><span class="sy0">][</span><span class="re2">jplus</span><span class="sy0">]</span><br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (grid<span class="sy0">[</span><span class="re2">i</span><span class="sy0">][</span><span class="re2">j</span><span class="sy0">]</span> == 1 and (neighbourcount == 2 or neighbourcount == 3)) or (grid<span class="sy0">[</span><span class="re2">i</span><span class="sy0">][</span><span class="re2">j</span><span class="sy0">]</span> == 0 and neighbourcount == 3) then<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp<span class="sy0">[</span><span class="re2">i</span><span class="sy0">][</span><span class="re2">j</span><span class="sy0">]</span> = 1<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp<span class="sy0">[</span><span class="re2">i</span><span class="sy0">][</span><span class="re2">j</span><span class="sy0">]</span> = 0<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; return temp<br>
+                                                    &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; function display(grid)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; local gridsize = #grid<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; for i = 1, gridsize do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for j = 1, gridsize do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re12">\node</span>[cellframe</span><span class="sy0">]</span> at (<span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint((i - 1) * 5)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[mm,</span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(-((j - 1) * 5))<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="sy0"><span class="re2">[mm){0};</span></span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if grid<span class="sy0">[</span><span class="re2">j</span><span class="sy0">][</span><span class="re2">i</span><span class="sy0">]</span> == 1 then<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re12">\node</span>[alivecell</span><span class="sy0">]</span> at (<span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint((i - 1) * 5)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[mm,</span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(-((j - 1) * 5))<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="sy0"><span class="re2">[mm){1};</span></span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; function animate(grid, iterations)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; for i = 1, iterations - 1 do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display(grid)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re12">\newframe</span></span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid = evolve(grid)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; display(grid)<br>
+                                                    &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; function frames(grid, iterations)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; for i = 1, iterations - 1 do<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re8">\begin</span><span class="sy0">{</span><span class="re7">tikzpicture</span>}</span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display(grid)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid = evolve(grid)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re8">\end</span><span class="sy0">{</span><span class="re7">tikzpicture</span>}</span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re12">\clearpage</span></span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; end<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re8">\begin</span><span class="sy0">{</span><span class="re7">tikzpicture</span>}</span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; display(grid)<br>
+                                                    &nbsp; &nbsp; &nbsp; &nbsp; tex.sprint(<span class="sy0">[</span><span class="re2">[<span class="re8">\end</span><span class="sy0">{</span><span class="re7">tikzpicture</span>}</span><span class="sy0">]]</span>)<br>
+                                                    &nbsp; &nbsp; end<br>
+                                                    <span class="re8">\end</span><span class="sy0">{</span><span class="re7">luacode*</span><span class="sy0">}</span><br>
+                                                    <br>
+                                                    <span class="re12">\noindent</span><span class="re8">\begin</span><span class="sy0">{</span><span class="re7">animateinline</span><span class="sy0">}[</span><span class="re2">autoplay,loop,<br>
+                                                    begin=<span class="sy0">{</span><span class="re8">\begin</span><span class="sy0">{</span><span class="re7">tikzpicture</span>}[scale=1</span><span class="sy0">]}</span>,<br>
+                                                    end=<span class="sy0">{</span><span class="re8">\end</span><span class="sy0">{</span><span class="re7">tikzpicture</span><span class="sy0">}}]{</span>5<span class="sy0">}</span><br>
+                                                    &nbsp; &nbsp; <span class="re12">\luadirect</span><span class="sy0">{</span>animate(grid, iterations)<span class="sy0">}</span><br>
+                                                    <span class="re8">\end</span><span class="sy0">{</span><span class="re7">animateinline</span></span><span class="sy0">}</span><br>
+                                                    <span class="co1">%\noindent\luadirect{frames(grid, iterations)}</span><br>
+                                                    <br>
+                                                    <span class="re8">\end</span><span class="sy0">{</span><span class="re9"><span class="re7">document</span></span><span class="sy0">}</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>
+                                <em>Note:</em> More information about my implementation is available <a href="https://tex.stackexchange.com/a/145463">in my answer on TeX.SX</a>.
+                            </p>
+                            <p>
+                                It turned out to be pretty easy to do this in LuaTeX, however I struggled with the modulus operator (<code class="codecolorer text dawn"><span class="text">%</span></code>) and printing from Lua to TeX. Still it became a pretty nice solution, I think.
+                            </p>
+                            <p>
+                                Last but not least I’m very grateful for the answers on my question. Here are some nice outputs of <a href="https://tex.stackexchange.com/a/145331">jfbu’s</a> and <a href="https://tex.stackexchange.com/a/145336">JLDiaz’s</a> answers (if you have a <a href="https://tex.stackexchange.com/" title="TeX - LaTeX Stack Exchange">TeX.SX</a> registration then please post an upvote on them because they are really great):
+                            </p>
+                            <p>
+                                <img src="wp-content/uploads/2013/11/jfbu_1.gif" alt="Gosper glider gun" width="705" height="374" class="alignnone size-full wp-image-8509"><br>
+                                <img src="wp-content/uploads/2013/11/jfbu_2.gif" alt="Glider" width="197" height="286" class="alignnone size-full wp-image-8510">&nbsp;<img src="wp-content/uploads/2013/11/jldiaz_1.gif" alt="Glider" width="239" height="226" class="alignnone size-full wp-image-8512"><br>
+                                <img src="wp-content/uploads/2013/11/jldiaz_2.gif" alt="Gosper glider gun" width="456" height="238" class="alignnone size-full wp-image-8513">
+                            </p>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="tag/tex-latex/index.html" rel="tag">TeX/LaTeX</a>
+                                    </li>
+                                    <li>
+                                        <a href="tag/tipografia/index.html" rel="tag">tipográfia</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <h3>
+                            Mit olvasunk?
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li>
+                                    <a href="#">Boing Boing</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Canonical Design">Canonical Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Culture Japan – Your portal to Japan">Culture Japan</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Engadget">Engadget</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Fat-Pie.com :: Animation and stuff by David Firth">Fat-Pie.com</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Free Gamer – Open Source Games">Free Gamer</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Handras">Handras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hungarian Unix Portal">Hungarian Unix Portal</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="IKEA Hackers">IKEA Hackers</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Jupiter Broadcasting">Jupiter Broadcasting</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Keleti Szél">Keleti Szél</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Napirajz – Súlyosbítva azt, ami amúgy is.">Napirajz</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="plastik media">Plastik média</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="PROHARDVER! – Az Online PC Magazin">PROHARDVER!</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tokyo Times – Photographs from a small group of islands">Tokyo Times</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Twitch">Twitch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>
+                            Kategóriák
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li class="cat-item cat-item-3">
+                                    <a href="category/a-blog/index.html">a blog</a> (10)
+                                </li>
+                                <li class="cat-item cat-item-4">
+                                    <a href="category/alkotunk/index.html">alkotunk</a> (37)
+                                </li>
+                                <li class="cat-item cat-item-6">
+                                    <a href="category/animacio/index.html">animáció</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-7">
+                                    <a href="category/anime/index.html">anime</a> (9)
+                                </li>
+                                <li class="cat-item cat-item-8">
+                                    <a href="category/apple/index.html">Apple</a> (2)
+                                </li>
+                                <li class="cat-item cat-item-15">
+                                    <a href="category/film/index.html">film</a> (36)
+                                </li>
+                                <li class="cat-item cat-item-17">
+                                    <a href="category/foto/index.html">fotó</a> (18)
+                                </li>
+                                <li class="cat-item cat-item-18">
+                                    <a href="category/gizmo/index.html">gizmó</a> (48)
+                                </li>
+                                <li class="cat-item cat-item-20">
+                                    <a href="category/hardver/index.html">hardver</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-21">
+                                    <a href="category/holiday/index.html">holiday</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-36">
+                                    <a href="category/humor/index.html">humor</a> (14)
+                                </li>
+                                <li class="cat-item cat-item-26">
+                                    <a href="category/ismeretterjeszto/index.html">ismeretterjesztő</a> (31)
+                                </li>
+                                <li class="cat-item cat-item-28">
+                                    <a href="category/japan/index.html">Japán</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-29">
+                                    <a href="category/jatek/index.html">játék</a> (35)
+                                </li>
+                                <li class="cat-item cat-item-34">
+                                    <a href="category/konyv/index.html">könyv</a> (15)
+                                </li>
+                                <li class="cat-item cat-item-35">
+                                    <a href="category/linux/index.html">Linux</a> (38)
+                                </li>
+                                <li class="cat-item cat-item-43">
+                                    <a href="category/munka/index.html">munka</a> (8)
+                                </li>
+                                <li class="cat-item cat-item-44">
+                                    <a href="category/muveszet-dizajn/index.html">művészet, dizájn</a> (34)
+                                </li>
+                                <li class="cat-item cat-item-46">
+                                    <a href="category/para/index.html">para</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-52">
+                                    <a href="category/sport/index.html">sport</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-54">
+                                    <a href="category/szoftver/index.html">szoftver</a> (88)
+                                </li>
+                                <li class="cat-item cat-item-99">
+                                    <a href="category/tv/index.html">TV</a> (1)
+                                </li>
+                                <li class="cat-item cat-item-67">
+                                    <a href="category/void/index.html">void *</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-68">
+                                    <a href="category/web2/index.html">web2</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-70">
+                                    <a href="category/zene/index.html">zene</a> (25)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copy">
+                Minden itt található tartalomra a <a title="Creative Commons — Attribution-NonCommercial-ShareAlike 2.5 Hungary" href="#" rel="copyright">Creative<br>
+                Commons 2.5</a> licencfeltételek érvényesek.
+            </p>
+            <p class="credits">
+                Dizájn: <a href="#" title="WPSHOWER - Free wordpress themes">Wpshower</a> & <a href="#" title="Reveal this e-mail address">szantaii</a>.
+            </p>
+        </div>
+    </body>
+</html>

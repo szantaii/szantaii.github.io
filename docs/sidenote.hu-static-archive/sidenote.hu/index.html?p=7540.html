@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            Making old games work under new operating systems – Part&nbsp;1: Gorillas / sidenote
+        </title>
+        <link rel="shortcut icon" href="wp-content/themes/sidenoteminimal/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/sidenoteminimal/pagenavi-css.css">
+        <link rel="stylesheet" id="codecolorer-css" href="wp-content/plugins/codecolorer/codecolorer.css%3Fver=0.9.11.css" type="text/css" media="screen">
+        <link rel="prev" title="Így készül a Raspberry Pi" href="index.html%3Fp=7529.html">
+        <link rel="next" title="Re: 10 PRINT CHR$(205.5+RND(1)); : GOTO 10" href="index.html%3Fp=7603.html">
+        <link rel="canonical" href="index.html%3Fp=7540.html">
+        <link rel="shortlink" href="index.html%3Fp=7540.html">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header clear">
+                <div class="logo">
+                    <a title="http://sidenote.hu/" href="index.html">http://sidenote.hu/</a>
+                </div>
+                <h1>
+                    <a title="sidenote" href="index.html">sidenote</a>
+                </h1>
+                <div class="menu">
+                    <ul id="menu-header" class="menu">
+                        <li id="menu-item-4317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4317">
+                            <a title="Címlap" href="index.html">Címlap</a>
+                        </li>
+                        <li id="menu-item-7810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7810">
+                            <a title="Projektek" href="index.html%3Fp=7396.html">Projektek</a>
+                        </li>
+                        <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319">
+                            <a title="Rólunk" href="index.html%3Fp=1345.html">Rólunk</a>
+                        </li>
+                        <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318">
+                            <a title="Archívum" href="index.html%3Fp=284.html">Archívum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form id="searchform" name="searchform">
+                        <fieldset disabled>
+                            <input type="text" value="Keresés" disabled>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="middle clear">
+                <div id="content">
+                    <div class="single clear post-7540 post type-post status-publish format-standard hentry category-ismeretterjeszto category-jatek category-linux category-szoftver tag-basic" id="post_7540">
+                        <div class="post_meta">
+                            <h2>
+                                <a href="index.html%3Fp=7540.html" title="Making old games work under new operating systems – Part&nbsp;1: Gorillas" rel="chapter">Making old games work under new operating systems – Part&nbsp;1: Gorillas</a>
+                            </h2>
+                            <div class="post_data">
+                                <div class="post_author">
+                                    Írta: <a href="index.html" title="szantaii honlapjának megtekintése" rel="author external">szantaii</a>
+                                </div>
+                                <div class="post_date">
+                                    2012. december 14. 12:47
+                                </div>
+                                <div class="post_categories">
+                                    <a href="category/ismeretterjeszto/index.html" rel="category tag">ismeretterjesztő</a>, <a href="category/jatek/index.html" rel="category tag">játék</a>, <a href="category/linux/index.html" rel="category tag">Linux</a>, <a href="category/szoftver/index.html" rel="category tag">szoftver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <p>
+                                <img src="wp-content/uploads/2012/12/gorillas_screenshot.png" alt="Gorillas" width="640" height="350" class="alignnone size-full wp-image-7547" srcset="wp-content/uploads/2012/12/gorillas_screenshot.png 640w, wp-content/uploads/2012/12/gorillas_screenshot-225x123.png 225w, wp-content/uploads/2012/12/gorillas_screenshot-350x191.png 350w" sizes="(max-width: 640px) 100vw, 640px">
+                            </p>
+                            <p>
+                                Image source: <a href="https://en.wikipedia.org/wiki/File:Gorillas_screenshot.png">File:Gorillas screenshot.png – Wikipedia</a>
+                            </p>
+                            <p>
+                                I hope there are still some of you out there who remember the game <a href="https://en.wikipedia.org/wiki/Gorillas_%28video_game%29">Gorillas</a> written in Basic. I have friends who still play this game from time to time.
+                            </p>
+                            <p>
+                                These guys use Linux as their main operating system, so getting Gorillas to work needed the following workaround. First you had to get QBasic (from Microsoft or another source), then install <a href="https://www.dosbox.com/">DOSBox</a> under Linux, start QBasic in DOSBox, load the source of Gorillas, and start the game. Each time you wanted to play you had to go through these steps, plus you had to adjust the game speed in DOSBox for your computer. I admit this isn’t difficult, but it is pokey.
+                            </p>
+                            <p>
+                                So the other day I thought about rewriting this game in Basic and make it work under Windows and Linux. Finding the <a href="#">original(?) source</a> wasn’t hard. The next step was to find a Basic compiler. I knew <a href="https://www.freebasic.net/">FreeBASIC</a>, and after looking into it a little I’ve found out I can use the original graphics library of QBasic using FreeBASIC. The only problem was that I couldn’t set up FreeBASIC under 64&nbsp;bit Linux, and there was the issue that FreeBASIC is a 32&nbsp;bit only compiler too. I diched FreeBASIC and started to search for another Basic compiler, and luckily I’ve found <a href="#">QB64</a>.
+                            </p>
+                            <p>
+                                “Over 45 years of compatibility…” said the QB64 website. This aroused my interest, I thought that I might not need to rewrite the game at all but I may be able to compile the original source with QB64. To cut a long story short I had to touch only five lines of code in the original source to get the game work under Windows and Linux. Here is the receipt.
+                            </p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        QB64 doesn’t like the inline definition on line 211, so comment it out.
+                                    </p>
+                                    <div class="codecolorer-container qbasic dawn" style="overflow:auto;white-space:nowrap;">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="line-numbers">
+                                                        <div>
+                                                            211<br>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="qbasic codecolorer">
+                                                            <span class="co1">'DEF FnRan (x) = INT(RND(1) * x) + 1</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>
+                                        Add a new function declaration to the code (around line 90 in the original source).
+                                    </p>
+                                    <div class="codecolorer-container qbasic dawn" style="overflow:auto;white-space:nowrap;">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="line-numbers">
+                                                        <div>
+                                                            1<br>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="qbasic codecolorer">
+                                                            <span class="kw3">DECLARE</span> <span class="kw1">FUNCTION</span> FnRan <span class="br0">(</span>x<span class="br0">)</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>
+                                        Add the following function definition to the end of the file.
+                                    </p>
+                                    <div class="codecolorer-container qbasic dawn" style="overflow:auto;white-space:nowrap;">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="line-numbers">
+                                                        <div>
+                                                            1<br>
+                                                            2<br>
+                                                            3<br>
+                                                            4<br>
+                                                            5<br>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="qbasic codecolorer">
+                                                            <span class="kw1">FUNCTION</span> FnRan <span class="br0">(</span>x<span class="br0">)</span><br>
+                                                            <br>
+                                                            &nbsp; &nbsp; FnRan <span class="sy0">=</span> <span class="kw3">INT</span><span class="br0">(</span><span class="kw3">RND</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span> <span class="sy0">*</span> x<span class="br0">)</span> <span class="sy0">+</span> <span class="nu0">1</span><br>
+                                                            <br>
+                                                            <span class="kw3">END</span> <span class="kw1">FUNCTION</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>
+                                        Adjust the <code class="codecolorer qbasic dawn"><span class="qbasic"><span class="kw3">CONST</span> SPEEDCONST</span></code> constant’s value from 500 to 100,000,000 (line 123 in the original source). Note that you may need to use a different value, depending your computer.
+                                    </p>
+                                    <div class="codecolorer-container qbasic dawn" style="overflow:auto;white-space:nowrap;">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="line-numbers">
+                                                        <div>
+                                                            123<br>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="qbasic codecolorer">
+                                                            <span class="kw3">CONST</span> SPEEDCONST <span class="sy0">=</span> <span class="nu0">100000000</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>
+                                        Compile.
+                                    </p>
+                                </li>
+                            </ol>
+                            <p>
+                                That’s it. After these modifications the code will compile without any errors. I tried it on Windows and Linux. (I don’t have a Mac but I’m pretty sure this will work under OS X too.) See the proof below.
+                            </p>
+                            <p>
+                                <a href="wp-content/uploads/2012/12/gorillas_windows.png"><img src="wp-content/uploads/2012/12/gorillas_windows-350x204.png" alt="Gorillas running under Windows 7" width="350" height="204" class="alignnone size-medium wp-image-7595" srcset="wp-content/uploads/2012/12/gorillas_windows-350x204.png 350w, wp-content/uploads/2012/12/gorillas_windows-225x131.png 225w, wp-content/uploads/2012/12/gorillas_windows.png 646w" sizes="(max-width: 350px) 100vw, 350px"></a>&nbsp;<a href="wp-content/uploads/2012/12/gorillas_linux.png"><img src="wp-content/uploads/2012/12/gorillas_linux-350x207.png" alt="Gorillas running under Ubuntu 12.04 (64 bit)" width="350" height="207" class="alignnone size-medium wp-image-7596" srcset="wp-content/uploads/2012/12/gorillas_linux-350x207.png 350w, wp-content/uploads/2012/12/gorillas_linux-225x133.png 225w, wp-content/uploads/2012/12/gorillas_linux.png 642w" sizes="(max-width: 350px) 100vw, 350px"></a>
+                            </p>
+                            <p>
+                                <em>Edit #1</em>
+                            </p>
+                            <p>
+                                I’m posting a patch which contains all described modifications. To patch the original source first unpack the linked tar.gz file then enter the following command in your terminal.
+                            </p>
+                            <div class="codecolorer-container bash dawn" style="overflow:auto;white-space:nowrap;">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="line-numbers">
+                                                <div>
+                                                    1<br>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="bash codecolorer">
+                                                    <span class="kw2">patch</span> gorilla.bas <span class="re5">-o</span> gorilla-patched.bas <span class="sy0">&lt;</span> gorilla.bas.patch
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>
+                                Note that you will need the <code class="codecolorer text dawn"><span class="text">diff</span></code> and <code class="codecolorer text dawn"><span class="text">patch</span></code> programs for this operation (available through Cygwin under Windows).
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="wp-content/uploads/2012/12/gorilla.bas_.patch_.tar.gz">gorilla.bas.patch.tar.gz</a>
+                                </li>
+                            </ul>
+                            <div class="post_tags clear">
+                                <ul>
+                                    <li>
+                                        <a href="tag/basic/index.html" rel="tag">Basic</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <h3>
+                            Mit olvasunk?
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li>
+                                    <a href="#">Boing Boing</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Canonical Design">Canonical Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Culture Japan – Your portal to Japan">Culture Japan</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Engadget">Engadget</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Fat-Pie.com :: Animation and stuff by David Firth">Fat-Pie.com</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Free Gamer – Open Source Games">Free Gamer</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Handras">Handras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Hungarian Unix Portal">Hungarian Unix Portal</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="IKEA Hackers">IKEA Hackers</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Jupiter Broadcasting">Jupiter Broadcasting</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Keleti Szél">Keleti Szél</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Napirajz – Súlyosbítva azt, ami amúgy is.">Napirajz</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="plastik media">Plastik média</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="PROHARDVER! – Az Online PC Magazin">PROHARDVER!</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Tokyo Times – Photographs from a small group of islands">Tokyo Times</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Twitch">Twitch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>
+                            Kategóriák
+                        </h3>
+                        <div class="widget_body">
+                            <ul>
+                                <li class="cat-item cat-item-3">
+                                    <a href="category/a-blog/index.html">a blog</a> (10)
+                                </li>
+                                <li class="cat-item cat-item-4">
+                                    <a href="category/alkotunk/index.html">alkotunk</a> (37)
+                                </li>
+                                <li class="cat-item cat-item-6">
+                                    <a href="category/animacio/index.html">animáció</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-7">
+                                    <a href="category/anime/index.html">anime</a> (9)
+                                </li>
+                                <li class="cat-item cat-item-8">
+                                    <a href="category/apple/index.html">Apple</a> (2)
+                                </li>
+                                <li class="cat-item cat-item-15">
+                                    <a href="category/film/index.html">film</a> (36)
+                                </li>
+                                <li class="cat-item cat-item-17">
+                                    <a href="category/foto/index.html">fotó</a> (18)
+                                </li>
+                                <li class="cat-item cat-item-18">
+                                    <a href="category/gizmo/index.html">gizmó</a> (48)
+                                </li>
+                                <li class="cat-item cat-item-20">
+                                    <a href="category/hardver/index.html">hardver</a> (16)
+                                </li>
+                                <li class="cat-item cat-item-21">
+                                    <a href="category/holiday/index.html">holiday</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-36">
+                                    <a href="category/humor/index.html">humor</a> (14)
+                                </li>
+                                <li class="cat-item cat-item-26">
+                                    <a href="category/ismeretterjeszto/index.html">ismeretterjesztő</a> (31)
+                                </li>
+                                <li class="cat-item cat-item-28">
+                                    <a href="category/japan/index.html">Japán</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-29">
+                                    <a href="category/jatek/index.html">játék</a> (35)
+                                </li>
+                                <li class="cat-item cat-item-34">
+                                    <a href="category/konyv/index.html">könyv</a> (15)
+                                </li>
+                                <li class="cat-item cat-item-35">
+                                    <a href="category/linux/index.html">Linux</a> (38)
+                                </li>
+                                <li class="cat-item cat-item-43">
+                                    <a href="category/munka/index.html">munka</a> (8)
+                                </li>
+                                <li class="cat-item cat-item-44">
+                                    <a href="category/muveszet-dizajn/index.html">művészet, dizájn</a> (34)
+                                </li>
+                                <li class="cat-item cat-item-46">
+                                    <a href="category/para/index.html">para</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-52">
+                                    <a href="category/sport/index.html">sport</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-54">
+                                    <a href="category/szoftver/index.html">szoftver</a> (88)
+                                </li>
+                                <li class="cat-item cat-item-99">
+                                    <a href="category/tv/index.html">TV</a> (1)
+                                </li>
+                                <li class="cat-item cat-item-67">
+                                    <a href="category/void/index.html">void *</a> (22)
+                                </li>
+                                <li class="cat-item cat-item-68">
+                                    <a href="category/web2/index.html">web2</a> (3)
+                                </li>
+                                <li class="cat-item cat-item-70">
+                                    <a href="category/zene/index.html">zene</a> (25)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copy">
+                Minden itt található tartalomra a <a title="Creative Commons — Attribution-NonCommercial-ShareAlike 2.5 Hungary" href="#" rel="copyright">Creative<br>
+                Commons 2.5</a> licencfeltételek érvényesek.
+            </p>
+            <p class="credits">
+                Dizájn: <a href="#" title="WPSHOWER - Free wordpress themes">Wpshower</a> & <a href="#" title="Reveal this e-mail address">szantaii</a>.
+            </p>
+        </div>
+    </body>
+</html>
